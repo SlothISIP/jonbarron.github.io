@@ -24,7 +24,99 @@
 
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    
+
+    <!-- JSON-LD Schema for Google Scholar and Search Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ju O Kim",
+      "givenName": "Ju O",
+      "familyName": "Kim",
+      "jobTitle": "Lead Researcher",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "JS SYSTEM",
+        "url": "http://js-system.co.kr/"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Keimyung University",
+        "url": "https://www.kmu.ac.kr/"
+      },
+      "url": "https://slothisip.github.io/",
+      "email": "orcakim21@gmail.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/juo-kim-614b9b192",
+        "https://github.com/SlothISIP"
+      ],
+      "knowsAbout": [
+        "UWB Radar",
+        "Respiratory Monitoring",
+        "CNN-LSTM",
+        "Thermal Camera Calibration",
+        "AutoML",
+        "Deep Learning",
+        "Computer Vision",
+        "Signal Processing",
+        "Sensor Fusion"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Publications by Ju O Kim",
+      "numberOfItems": 15,
+      "itemListElement": [
+        {
+          "@type": "ScholarlyArticle",
+          "position": 1,
+          "name": "Overcoming Data Scarcity in Non-Contact Respiratory Monitoring: A DTW-Enhanced CNN-LSTM Approach",
+          "author": {"@type": "Person", "name": "Ju O Kim"},
+          "datePublished": "2025",
+          "isPartOf": {"@type": "Periodical", "name": "Electronics (MDPI)"}
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "position": 2,
+          "name": "Calibrating a Three-Viewpoints Thermal Camera with Few Correspondences",
+          "author": {"@type": "Person", "name": "Ju O Kim"},
+          "datePublished": "2024",
+          "isPartOf": {"@type": "Periodical", "name": "Journal of Signal Processing Systems (Springer)"}
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "position": 3,
+          "name": "Detection of Abnormal Respiration from Multiple-Input Respiratory Signals",
+          "author": {"@type": "Person", "name": "Ju O Kim"},
+          "datePublished": "2020",
+          "isPartOf": {"@type": "Periodical", "name": "Sensors (MDPI)"}
+        }
+      ]
+    }
+    </script>
+
+    <!-- Unified Hover Utility for Publication Images -->
+    <script type="text/javascript">
+      // Generic hover functions - reduces code duplication for future entries
+      function hoverStart(id) {
+        var el = document.getElementById(id + '_image');
+        if (el) el.style.opacity = "1";
+      }
+      function hoverStop(id) {
+        var el = document.getElementById(id + '_image');
+        if (el) el.style.opacity = "0";
+      }
+      // Initialize all hover images on page load
+      document.addEventListener('DOMContentLoaded', function() {
+        var hoverElements = document.querySelectorAll('.two');
+        hoverElements.forEach(function(el) {
+          el.style.opacity = "0";
+        });
+      });
+    </script>
   </head>
 
   <body>
@@ -199,9 +291,9 @@
   <td style="padding:16px;width:20%;vertical-align:middle">
     <div class="one">
       <div class="two" id='iceic2021_image'>
-        <img src='images/springer2024_calibration.jpg' width=100%>
+        <img src='images/digital_twin_architecture.jpg' width=100%>
       </div>
-      <img src='images/springer2024_config.jpg' width=100%>
+      <img src='images/digital_twin_monitoring.jpg' width=100%>
     </div>
     <script type="text/javascript">
       function iceic2021_start() {
@@ -215,7 +307,7 @@
     </script>
   </td>
   <td style="padding:8px;width:80%;vertical-align:middle">
-    <a href="https://ieeexplore.ieee.org/document/9363329">
+    <a href="iceic2021/index.html">
       <span class="papertitle">Mathematical Model for a Calibration of Multiple-View Thermal Camera</span>
     </a>
     <br>
@@ -224,6 +316,8 @@
     <br>
     <em>International Conference on Electronics, Information, and Communication (ICEIC)</em><span class="pub-badge pub-badge-conf">Conf</span>, 2021
     <br>
+    <a href="iceic2021/index.html">project page</a>
+    /
     <a href="https://ieeexplore.ieee.org/document/9363329">paper</a>
     /
     <a href="data/KimICEIC2021.bib">bibtex</a>
@@ -255,7 +349,7 @@
     </script>
   </td>
   <td style="padding:8px;width:80%;vertical-align:middle">
-    <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10555301">
+    <a href="kais2021/index.html">
       <span class="papertitle">Thermal Camera Calibration using Images with Improved Quality</span>
     </a>
     <br>
@@ -264,6 +358,8 @@
     <br>
     <em>Journal of the Korea Academia-Industrial cooperation Society (KAIS)</em><span class="pub-badge pub-badge-domestic">KCI</span>, 2021
     <br>
+    <a href="kais2021/index.html">project page</a>
+    /
     <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10555301">paper</a>
     /
     <a href="data/KimKAIS2021.bib">bibtex</a>
@@ -279,9 +375,9 @@
   <td style="padding:16px;width:20%;vertical-align:middle">
     <div class="one">
       <div class="two" id='kics2020_image'>
-        <img src='images/sensors2020_signal.jpg' width=100%>
+        <img src='images/avs_beamforming.jpg' width=100%>
       </div>
-      <img src='images/sensors2020_algorithm.jpg' width=100%>
+      <img src='images/avs_spectrogram.jpg' width=100%>
     </div>
     <script type="text/javascript">
       function kics2020_start() {
@@ -295,7 +391,7 @@
     </script>
   </td>
   <td style="padding:8px;width:80%;vertical-align:middle">
-    <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10508537">
+    <a href="kics2020/index.html">
       <span class="papertitle">Classification of Respiration Status using Signal Analysis in Z-Domain</span>
     </a>
     <br>
@@ -304,6 +400,8 @@
     <br>
     <em>The Journal of Korean Institute of Communications and Information Sciences (KICS)</em><span class="pub-badge pub-badge-domestic">KCI</span>, 2020
     <br>
+    <a href="kics2020/index.html">project page</a>
+    /
     <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10508537">paper</a>
     /
     <a href="data/KimKICS2020.bib">bibtex</a>
@@ -335,7 +433,7 @@
     </script>
   </td>
   <td style="padding:8px;width:80%;vertical-align:middle">
-    <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10481142">
+    <a href="jic2020/index.html">
       <span class="papertitle">Boundary and Corner Detection for Multi-Thermal Camera Calibration</span>
     </a>
     <br>
@@ -344,6 +442,8 @@
     <br>
     <em>Journal of Information and Control</em><span class="pub-badge pub-badge-domestic">KCI</span>, 2020
     <br>
+    <a href="jic2020/index.html">project page</a>
+    /
     <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10481142">paper</a>
     /
     <a href="data/KimJIC2020.bib">bibtex</a>
@@ -375,7 +475,7 @@
     </script>
   </td>
   <td style="padding:8px;width:80%;vertical-align:middle">
-    <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10504746">
+    <a href="ksae2020/index.html">
       <span class="papertitle">Detection of Abnormal Respiration Status from Mixed Signals Using High Pass Filter</span>
     </a>
     <br>
@@ -384,6 +484,8 @@
     <br>
     <em>Proceedings of KSAE Annual Autumn Conference</em><span class="pub-badge pub-badge-conf">Conf</span>, 2020
     <br>
+    <a href="ksae2020/index.html">project page</a>
+    /
     <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10504746">paper</a>
     /
     <a href="data/KimKSAE2020.bib">bibtex</a>
@@ -399,9 +501,9 @@
   <td style="padding:16px;width:20%;vertical-align:middle">
     <div class="one">
       <div class="two" id='kicsw2020_image'>
-        <img src='images/sensors2020_system.jpg' width=100%>
+        <img src='images/apex_pipeline.jpg' width=100%>
       </div>
-      <img src='images/sensors2020_algorithm.jpg' width=100%>
+      <img src='images/apex_features.jpg' width=100%>
     </div>
     <script type="text/javascript">
       function kicsw2020_start() {
@@ -415,7 +517,7 @@
     </script>
   </td>
   <td style="padding:8px;width:80%;vertical-align:middle">
-    <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE07997660">
+    <a href="kicsw2020/index.html">
       <span class="papertitle">Classification of Respiratory Status using UWB Radar based on a Learning Algorithm</span>
     </a>
     <br>
@@ -425,6 +527,8 @@
     <br>
     <em>KICS Winter Conference</em><span class="pub-badge pub-badge-conf">Conf</span>, 2020
     <br>
+    <a href="kicsw2020/index.html">project page</a>
+    /
     <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE07997660">paper</a>
     /
     <a href="data/KimKICSWinter2020.bib">bibtex</a>
@@ -440,9 +544,9 @@
   <td style="padding:16px;width:20%;vertical-align:middle">
     <div class="one">
       <div class="two" id='kais2019_image'>
-        <img src='images/electronics2025_performance.jpg' width=100%>
+        <img src='images/visionforge_dashboard.jpg' width=100%>
       </div>
-      <img src='images/electronics2025_confusion.jpg' width=100%>
+      <img src='images/visionforge_closeup.jpg' width=100%>
     </div>
     <script type="text/javascript">
       function kais2019_start() {
@@ -456,7 +560,7 @@
     </script>
   </td>
   <td style="padding:8px;width:80%;vertical-align:middle">
-    <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE07990428">
+    <a href="kais2019/index.html">
       <span class="papertitle">Modeling of Polygon-shaped Filter in Frequency Domain for Realistic Image Filtering Methods</span>
     </a>
     <br>
@@ -467,6 +571,8 @@
     <br>
     <em>Journal of the Korea Academia-Industrial cooperation Society (KAIS)</em><span class="pub-badge pub-badge-domestic">KCI</span>, 2019
     <br>
+    <a href="kais2019/index.html">project page</a>
+    /
     <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE07990428">paper</a>
     /
     <a href="data/KimKAIS2019.bib">bibtex</a>
@@ -482,9 +588,9 @@
   <td style="padding:16px;width:20%;vertical-align:middle">
     <div class="one">
       <div class="two" id='ieie2018a_image'>
-        <img src='images/electronics2025_performance.jpg' width=100%>
+        <img src='images/apex_pipeline.jpg' width=100%>
       </div>
-      <img src='images/electronics2025_confusion.jpg' width=100%>
+      <img src='images/apex_features.jpg' width=100%>
     </div>
     <script type="text/javascript">
       function ieie2018a_start() {
@@ -498,7 +604,7 @@
     </script>
   </td>
   <td style="padding:8px;width:80%;vertical-align:middle">
-    <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE07624922">
+    <a href="ieie2018a/index.html">
       <span class="papertitle">Polygon-shaped Filters for Analysis of Images in Frequency Domain</span>
     </a>
     <br>
@@ -509,6 +615,8 @@
     <br>
     <em>IEIE Fall Conference</em><span class="pub-badge pub-badge-conf">Conf</span>, 2018
     <br>
+    <a href="ieie2018a/index.html">project page</a>
+    /
     <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE07624922">paper</a>
     /
     <a href="data/KimIEIE2018a.bib">bibtex</a>
@@ -524,9 +632,9 @@
   <td style="padding:16px;width:20%;vertical-align:middle">
     <div class="one">
       <div class="two" id='ieie2018b_image'>
-        <img src='images/sensors2020_signal.jpg' width=100%>
+        <img src='images/avs_beamforming.jpg' width=100%>
       </div>
-      <img src='images/sensors2020_flowchart.jpg' width=100%>
+      <img src='images/avs_spectrogram.jpg' width=100%>
     </div>
     <script type="text/javascript">
       function ieie2018b_start() {
@@ -540,7 +648,7 @@
     </script>
   </td>
   <td style="padding:8px;width:80%;vertical-align:middle">
-    <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE07624936">
+    <a href="ieie2018b/index.html">
       <span class="papertitle">Application to Detection and Classification of Respiratory Status based on a Signal Correlation</span>
     </a>
     <br>
@@ -552,6 +660,8 @@
     <br>
     <em>IEIE Fall Conference</em><span class="pub-badge pub-badge-conf">Conf</span>, 2018
     <br>
+    <a href="ieie2018b/index.html">project page</a>
+    /
     <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE07624936">paper</a>
     /
     <a href="data/KimIEIE2018b.bib">bibtex</a>
@@ -567,9 +677,9 @@
   <td style="padding:16px;width:20%;vertical-align:middle">
     <div class="one">
       <div class="two" id='ieie2018c_image'>
-        <img src='images/springer2024_calibration.jpg' width=100%>
+        <img src='images/visionforge_dashboard.jpg' width=100%>
       </div>
-      <img src='images/springer2024_config.jpg' width=100%>
+      <img src='images/visionforge_closeup.jpg' width=100%>
     </div>
     <script type="text/javascript">
       function ieie2018c_start() {
@@ -583,7 +693,7 @@
     </script>
   </td>
   <td style="padding:8px;width:80%;vertical-align:middle">
-    <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE07624880">
+    <a href="ieie2018c/index.html">
       <span class="papertitle">Application to Camera Calibration using Learning Based Corner and Edge Detection</span>
     </a>
     <br>
@@ -594,6 +704,8 @@
     <br>
     <em>IEIE Fall Conference</em><span class="pub-badge pub-badge-conf">Conf</span>, 2018
     <br>
+    <a href="ieie2018c/index.html">project page</a>
+    /
     <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE07624880">paper</a>
     /
     <a href="data/KimIEIE2018c.bib">bibtex</a>
