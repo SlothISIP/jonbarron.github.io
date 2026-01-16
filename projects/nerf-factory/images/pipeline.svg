@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="nf1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#2196F3"/><stop offset="100%" style="stop-color:#1565C0"/></linearGradient>
+    <linearGradient id="nf2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#9C27B0"/><stop offset="100%" style="stop-color:#7B1FA2"/></linearGradient>
+    <linearGradient id="nf3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#FF9800"/><stop offset="100%" style="stop-color:#F57C00"/></linearGradient>
+    <linearGradient id="nf4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#4CAF50"/><stop offset="100%" style="stop-color:#388E3C"/></linearGradient>
+    <linearGradient id="nf5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#E91E63"/><stop offset="100%" style="stop-color:#C2185B"/></linearGradient>
+    <linearGradient id="nf6" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#00BCD4"/><stop offset="100%" style="stop-color:#0097A7"/></linearGradient>
+    <linearGradient id="nf7" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#795548"/><stop offset="100%" style="stop-color:#5D4037"/></linearGradient>
+    <linearGradient id="nf8" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#607D8B"/><stop offset="100%" style="stop-color:#455A64"/></linearGradient>
+  </defs>
+  <text x="400" y="30" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#333">Industrial NeRF Factory: 8-Phase Pipeline</text>
+  <text x="400" y="50" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">15,704+ LOC | 157 Tests | Sim-to-Real Manufacturing AI</text>
+  <rect x="40" y="80" width="160" height="90" rx="8" fill="url(#nf1)" stroke="#0D47A1" stroke-width="2"/>
+  <text x="120" y="105" text-anchor="middle" font-family="Arial" font-size="12" fill="white" font-weight="bold">Phase 1</text>
+  <text x="120" y="125" text-anchor="middle" font-family="Arial" font-size="10" fill="#BBDEFB">Data Collection</text>
+  <text x="120" y="145" text-anchor="middle" font-family="Arial" font-size="9" fill="white">Multi-view capture</text>
+  <rect x="220" y="80" width="160" height="90" rx="8" fill="url(#nf2)" stroke="#6A1B9A" stroke-width="2"/>
+  <text x="300" y="105" text-anchor="middle" font-family="Arial" font-size="12" fill="white" font-weight="bold">Phase 2</text>
+  <text x="300" y="125" text-anchor="middle" font-family="Arial" font-size="10" fill="#E1BEE7">NeRF Training</text>
+  <text x="300" y="145" text-anchor="middle" font-family="Arial" font-size="9" fill="white">3D reconstruction</text>
+  <rect x="400" y="80" width="160" height="90" rx="8" fill="url(#nf3)" stroke="#E65100" stroke-width="2"/>
+  <text x="480" y="105" text-anchor="middle" font-family="Arial" font-size="12" fill="white" font-weight="bold">Phase 3</text>
+  <text x="480" y="125" text-anchor="middle" font-family="Arial" font-size="10" fill="#FFE0B2">Synthetic Data</text>
+  <text x="480" y="145" text-anchor="middle" font-family="Arial" font-size="9" fill="white">Novel view synthesis</text>
+  <rect x="580" y="80" width="160" height="90" rx="8" fill="url(#nf4)" stroke="#2E7D32" stroke-width="2"/>
+  <text x="660" y="105" text-anchor="middle" font-family="Arial" font-size="12" fill="white" font-weight="bold">Phase 4</text>
+  <text x="660" y="125" text-anchor="middle" font-family="Arial" font-size="10" fill="#C8E6C9">Digital Twin</text>
+  <text x="660" y="145" text-anchor="middle" font-family="Arial" font-size="9" fill="white">Virtual factory</text>
+  <path d="M660 170 L660 200 L120 200 L120 230" stroke="#666" stroke-width="2" fill="none"/>
+  <rect x="40" y="240" width="160" height="90" rx="8" fill="url(#nf5)" stroke="#AD1457" stroke-width="2"/>
+  <text x="120" y="265" text-anchor="middle" font-family="Arial" font-size="12" fill="white" font-weight="bold">Phase 5</text>
+  <text x="120" y="285" text-anchor="middle" font-family="Arial" font-size="10" fill="#F8BBD9">Simulation</text>
+  <text x="120" y="305" text-anchor="middle" font-family="Arial" font-size="9" fill="white">Physics-based</text>
+  <rect x="220" y="240" width="160" height="90" rx="8" fill="url(#nf6)" stroke="#00838F" stroke-width="2"/>
+  <text x="300" y="265" text-anchor="middle" font-family="Arial" font-size="12" fill="white" font-weight="bold">Phase 6</text>
+  <text x="300" y="285" text-anchor="middle" font-family="Arial" font-size="10" fill="#B2EBF2">Model Training</text>
+  <text x="300" y="305" text-anchor="middle" font-family="Arial" font-size="9" fill="white">Domain adaptation</text>
+  <rect x="400" y="240" width="160" height="90" rx="8" fill="url(#nf7)" stroke="#4E342E" stroke-width="2"/>
+  <text x="480" y="265" text-anchor="middle" font-family="Arial" font-size="12" fill="white" font-weight="bold">Phase 7</text>
+  <text x="480" y="285" text-anchor="middle" font-family="Arial" font-size="10" fill="#D7CCC8">Validation</text>
+  <text x="480" y="305" text-anchor="middle" font-family="Arial" font-size="9" fill="white">Cross-domain test</text>
+  <rect x="580" y="240" width="160" height="90" rx="8" fill="url(#nf8)" stroke="#37474F" stroke-width="2"/>
+  <text x="660" y="265" text-anchor="middle" font-family="Arial" font-size="12" fill="white" font-weight="bold">Phase 8</text>
+  <text x="660" y="285" text-anchor="middle" font-family="Arial" font-size="10" fill="#CFD8DC">Deployment</text>
+  <text x="660" y="305" text-anchor="middle" font-family="Arial" font-size="9" fill="white">Production ready</text>
+  <rect x="40" y="360" width="700" height="70" rx="6" fill="#fafafa" stroke="#e0e0e0"/>
+  <text x="390" y="385" text-anchor="middle" font-family="Arial" font-size="12" fill="#333" font-weight="bold">Technology: NeRF/Nerfstudio | PyTorch/CUDA | Ray/K8s | ROS 2 | FastAPI</text>
+  <text x="390" y="410" text-anchor="middle" font-family="Arial" font-size="11" fill="#666">15,704+ lines of code | 157 tests | 8 pipeline phases | 30+ documentation files</text>
+</svg>

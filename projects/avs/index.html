@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>AI-Powered Acoustic Vision System (AVS)</title>
+
+    <meta name="description" content="Multimodal AI platform combining acoustic imaging and computer vision">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:image" content="../../images/avs.jpg">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="AI-Powered Acoustic Vision System" />
+    <meta property="og:description" content="Open-source acoustic camera research platform achieving SOTA results on DCASE 2020 benchmark." />
+
+    <link rel="shortcut icon" href="../../images/favicon/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h2 class="col-md-12 text-center">
+                AI-Powered Acoustic Vision System (AVS)
+                <small>
+                    Open-Source Research Platform
+                </small>
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="../../index.html">
+                          Ju O Kim
+                        </a>
+                        </br>Keimyung University
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Overview
+                </h3>
+                <p class="text-justify">
+                    AVS is an end-to-end multimodal AI platform combining acoustic imaging, computer vision, and deep learning for industrial machine anomaly detection. The project provides complete code infrastructure and trained baseline models for acoustic vision research.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    System Architecture
+                </h3>
+                <center>
+                    <img src="images/fig7_architecture_diagram.png" class="img-responsive" alt="System Architecture" style="max-height: 500px; width: auto;">
+                </center>
+                <br>
+                <p class="text-justify">
+                    The AVS architecture integrates multiple signal processing and deep learning components. Audio signals from microphone arrays are processed through beamforming algorithms (Delay-and-Sum, MVDR, MUSIC) for sound source localization. Visual data from cameras enables object detection and depth estimation. The multimodal fusion layer combines acoustic and visual features using Uncertainty-Aware Multimodal Fusion (UAMF) for robust anomaly detection.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Performance Comparison
+                </h3>
+                <center>
+                    <img src="images/fig1_performance_comparison.png" class="img-responsive" alt="Performance Comparison" style="max-height: 400px; width: auto;">
+                </center>
+                <br>
+                <p class="text-justify">
+                    Performance comparison across different machine types in the MIMII dataset. Our AST+LoRA approach achieves state-of-the-art results with mean AUC of 0.9421, exceeding the DCASE 2020 challenge winners by approximately 2%.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    DCASE 2020 Benchmark Results
+                </h3>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Machine Type</th>
+                            <th>AUC</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Fan</td>
+                            <td>0.8804</td>
+                            <td>+10% vs DCASE 2020 baseline</td>
+                        </tr>
+                        <tr>
+                            <td>Pump</td>
+                            <td>0.9212</td>
+                            <td>Competitive</td>
+                        </tr>
+                        <tr>
+                            <td>Slider</td>
+                            <td>0.9727</td>
+                            <td>+2% vs DCASE 2020 baseline</td>
+                        </tr>
+                        <tr>
+                            <td>Valve</td>
+                            <td>0.9940</td>
+                            <td>Near-perfect detection</td>
+                        </tr>
+                        <tr style="font-weight: bold; background-color: #f5f5f5;">
+                            <td>Mean</td>
+                            <td>0.9421</td>
+                            <td>+2% vs DCASE 2020 winners (0.92)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    ROC Curve Analysis
+                </h3>
+                <center>
+                    <img src="images/fig5_roc_curves.png" class="img-responsive" alt="ROC Curves" style="max-height: 400px; width: auto;">
+                </center>
+                <br>
+                <p class="text-justify">
+                    ROC curves for each machine type demonstrate the discriminative ability of our anomaly detection model. The Valve category achieves near-perfect separation (AUC 0.994), while Fan shows relatively lower but still strong performance (AUC 0.88).
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    End-to-End Results
+                </h3>
+                <center>
+                    <img src="images/e2e_sota_anomaly_results.png" class="img-responsive" alt="E2E Results" style="max-height: 400px; width: auto;">
+                </center>
+                <br>
+                <p class="text-justify">
+                    End-to-end anomaly detection results showing the complete pipeline from raw audio input to final anomaly scores. The system achieves 12ms per sample inference time on RTX 4090, enabling real-time deployment for industrial monitoring applications.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Spectrogram Analysis
+                </h3>
+                <center>
+                    <img src="images/spectrogram_demo.png" class="img-responsive" alt="STFT Spectrogram" style="max-height: 400px; width: auto;">
+                </center>
+                <br>
+                <p class="text-justify">
+                    STFT (Short-Time Fourier Transform) spectrogram analysis of industrial motor M-07 showing normal operation signature and detected bearing fault anomaly. The time-frequency representation clearly highlights the anomalous region between 6-8 seconds where bearing fault characteristics appear in the 2000-4000 Hz frequency range.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Beamforming Directional Response
+                </h3>
+                <center>
+                    <img src="images/beamforming.png" class="img-responsive" alt="Beamforming Pattern" style="max-height: 500px; width: auto;">
+                </center>
+                <br>
+                <p class="text-justify">
+                    MVDR (Minimum Variance Distortionless Response) beamforming polar plot showing the directional sensitivity pattern of the microphone array. The main lobe at 45° indicates the detected sound source location with SNR of 12.3 dB. Side lobes are effectively suppressed, demonstrating the array's ability to spatially filter and localize acoustic events in noisy industrial environments.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Project Statistics
+                </h3>
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <td>Code Implementation</td>
+                            <td>88,000+ lines across 160+ files</td>
+                        </tr>
+                        <tr>
+                            <td>Test Suite</td>
+                            <td>1,091 tests (97%+ pass rate)</td>
+                        </tr>
+                        <tr>
+                            <td>Datasets Supported</td>
+                            <td>231 GB (MIMII, LOCATA, DCASE2020, ACE)</td>
+                        </tr>
+                        <tr>
+                            <td>Inference Speed</td>
+                            <td>12ms/sample on RTX 4090</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Key Features
+                </h3>
+                <ul>
+                    <li><strong>Signal Processing:</strong> Delay-and-Sum, MVDR, MUSIC beamforming; GCC-PHAT localization; Spectral Subtraction, Wiener Filtering</li>
+                    <li><strong>Computer Vision:</strong> YOLOv8 object detection, MiDaS depth estimation</li>
+                    <li><strong>Anomaly Detection:</strong> AST (Audio Spectrogram Transformer) + LoRA + K-NN scoring</li>
+                    <li><strong>Multimodal Fusion:</strong> UAMF (Uncertainty-Aware Multimodal Fusion)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Technology Stack
+                </h3>
+                <ul>
+                    <li><strong>Deep Learning:</strong> PyTorch 2.0+, Transformers, PEFT (LoRA)</li>
+                    <li><strong>Audio:</strong> torchaudio, librosa</li>
+                    <li><strong>Vision:</strong> Ultralytics YOLOv8, timm (MiDaS)</li>
+                    <li><strong>Deployment:</strong> ONNX export, GPU optimized inference</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    System Visualizations
+                </h3>
+
+                <h4>Beamforming Heatmap Visualization</h4>
+                <center>
+                    <img src="../../images/AVS_1.png" class="img-responsive" alt="Beamforming Heatmap Visualization" style="max-height: 500px; width: auto;">
+                </center>
+                <p class="text-justify">
+                    Spatial acoustic intensity heatmap generated by the beamforming algorithm. The visualization shows the 2D sound source localization results overlaid on the camera view, enabling precise identification of acoustic events in the monitored environment.
+                </p>
+                <br>
+
+                <h4>DCASE Benchmark Results</h4>
+                <center>
+                    <img src="../../images/AVS_2.png" class="img-responsive" alt="DCASE Benchmark Results" style="max-height: 500px; width: auto;">
+                </center>
+                <p class="text-justify">
+                    Comprehensive benchmark results on the DCASE 2020 Task 2 challenge dataset. The visualization compares our AST+LoRA approach against baseline methods and challenge winners across different machine types, demonstrating state-of-the-art performance.
+                </p>
+                <br>
+
+                <h4>Time-Frequency Spectrogram Analysis</h4>
+                <center>
+                    <img src="../../images/AVS_3.png" class="img-responsive" alt="Time-Frequency Spectrogram Analysis" style="max-height: 500px; width: auto;">
+                </center>
+                <p class="text-justify">
+                    Detailed time-frequency spectrogram analysis showing the acoustic signatures of normal and anomalous machine operations. The visualization highlights distinctive frequency patterns that enable the deep learning model to detect subtle anomalies in industrial equipment.
+                </p>
+                <br>
+
+                <h4>Audio Spectrogram Transformer (AST) Architecture</h4>
+                <center>
+                    <img src="../../images/AVS_4.png" class="img-responsive" alt="AST Architecture" style="max-height: 500px; width: auto;">
+                </center>
+                <p class="text-justify">
+                    Architecture diagram of the Audio Spectrogram Transformer (AST) model with LoRA adaptation layers. The transformer-based architecture processes mel-spectrogram patches through self-attention mechanisms, achieving superior feature extraction for acoustic anomaly detection tasks.
+                </p>
+                <br>
+
+                <h4>Microphone Array Calibration Setup</h4>
+                <center>
+                    <img src="../../images/AVS_5.png" class="img-responsive" alt="Microphone Array Calibration Setup" style="max-height: 500px; width: auto;">
+                </center>
+                <p class="text-justify">
+                    Hardware calibration setup for the microphone array system. The visualization shows the precise geometric arrangement of microphones and the calibration procedure used to ensure accurate beamforming and sound source localization performance.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

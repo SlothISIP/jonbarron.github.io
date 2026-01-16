@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>ITS AI XAI - Explainable PCB Defect Detection</title>
+
+    <meta name="description" content="AI-powered PCB defect detection with multimodal fusion and explainable AI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:image" content="../../images/its_xai.jpg">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ITS AI XAI - Intelligent Testing System" />
+    <meta property="og:description" content="AI-powered PCB defect detection system with multimodal fusion and SHAP-based explainability." />
+
+    <link rel="shortcut icon" href="../../images/favicon/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h2 class="col-md-12 text-center">
+                ITS AI XAI: Intelligent Testing System<br>with Explainable AI
+                <small>
+                    Phase 1 Complete - Production Ready
+                </small>
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="../../index.html">
+                          Ju O Kim
+                        </a>
+                        </br>Keimyung University
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Overview
+                </h3>
+                <p class="text-justify">
+                    ITS_AI_XAI is a production-ready AI system for PCB manufacturing quality control. The system combines sensor data analysis with computer vision for early defect detection, root cause analysis, and process optimization using explainable AI techniques.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    System Architecture
+                </h3>
+                <center>
+                    <img src="images/architecture.svg" class="img-responsive" alt="System Architecture" style="max-height: 450px; width: auto;">
+                </center>
+                <br>
+                <p class="text-justify">
+                    The multimodal fusion pipeline combines sensor data (603 features) with visual PCB inspection. A Random Forest model processes sensor data while YOLOv11 handles visual defect detection. The Meta-Classifier (XGBoost) fuses both modalities, achieving F1-score of 0.9462. SHAP and Counterfactual explanations provide interpretability for manufacturing engineers.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Performance Metrics
+                </h3>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Target</th>
+                            <th>Achieved</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Meta-Classifier F1</td>
+                            <td>> 0.75</td>
+                            <td><strong>0.9462</strong></td>
+                            <td style="color: #4CAF50;">+26% above target</td>
+                        </tr>
+                        <tr>
+                            <td>API Latency</td>
+                            <td>< 120ms</td>
+                            <td><strong>67.3ms</strong></td>
+                            <td style="color: #4CAF50;">45% faster</td>
+                        </tr>
+                        <tr>
+                            <td>YOLO mAP@50</td>
+                            <td>> 90%</td>
+                            <td><strong>93.51%</strong></td>
+                            <td style="color: #4CAF50;">+3.5%</td>
+                        </tr>
+                        <tr>
+                            <td>Recall (Defect Detection)</td>
+                            <td>> 90%</td>
+                            <td><strong>95.91%</strong></td>
+                            <td style="color: #4CAF50;">+5.9%</td>
+                        </tr>
+                        <tr>
+                            <td>Defect Coverage</td>
+                            <td>100%</td>
+                            <td><strong>6/6 types</strong></td>
+                            <td style="color: #4CAF50;">Complete</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Key Capabilities
+                </h3>
+                <ul>
+                    <li><strong>Defect Early Warning:</strong> Real-time defect prediction during production (before final inspection) with 95.91% recall - catches 96% of defects</li>
+                    <li><strong>Root Cause Analysis:</strong> SHAP-based feature importance identification and counterfactual explanations ("what-if" scenarios)</li>
+                    <li><strong>Quality Process Optimization:</strong> Statistical pattern analysis with actionable recommendations for parameter tuning</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Explainable AI Features
+                </h3>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>SHAP Explanations</strong></td>
+                            <td>Instance-level feature importance with waterfall and force plots, showing top 10 contributors to each prediction</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Counterfactual Generation</strong></td>
+                            <td>"What-if" analysis: "Change feature X from A to B to flip prediction from FAIL to PASS"</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Global Feature Ranking</strong></td>
+                            <td>Overall feature importance across the entire dataset for process improvement</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    SHAP Waterfall Analysis
+                </h3>
+                <center>
+                    <img src="images/shap_example.png" class="img-responsive" alt="SHAP Waterfall Plot" style="max-height: 400px; width: auto;">
+                </center>
+                <br>
+                <p class="text-justify">
+                    SHAP (SHapley Additive exPlanations) waterfall plot showing how each feature contributes to the final prediction. Red arrows indicate features pushing toward DEFECT, while blue arrows show features pushing toward PASS. For this sample, Temperature_Zone3 (+0.18) and Solder_Paste_Volume (+0.12) are the primary drivers of the defect prediction.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Counterfactual Explanation
+                </h3>
+                <center>
+                    <img src="images/counterfactual.png" class="img-responsive" alt="Counterfactual Explanation" style="max-height: 350px; width: auto;">
+                </center>
+                <br>
+                <p class="text-justify">
+                    The counterfactual explanation shows the minimum changes needed to flip the prediction from DEFECT to PASS. For this example, reducing temperature from 248°C to 235°C and increasing pressure from 1.8 to 2.1 bar would change the prediction to PASS with 71.2% confidence. This provides actionable insights for process engineers to adjust manufacturing parameters.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    API Endpoints
+                </h3>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Endpoint</th>
+                            <th>Method</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>/health</code></td>
+                            <td>GET</td>
+                            <td>System health check + model status</td>
+                        </tr>
+                        <tr>
+                            <td><code>/predict</code></td>
+                            <td>POST</td>
+                            <td>Defect prediction (sensor + image)</td>
+                        </tr>
+                        <tr>
+                            <td><code>/explain</code></td>
+                            <td>POST</td>
+                            <td>SHAP feature importance explanations</td>
+                        </tr>
+                        <tr>
+                            <td><code>/counterfactual</code></td>
+                            <td>POST</td>
+                            <td>Generate "what-if" scenarios</td>
+                        </tr>
+                        <tr>
+                            <td><code>/metrics</code></td>
+                            <td>GET</td>
+                            <td>Performance metrics (latency, throughput)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Technology Stack
+                </h3>
+                <ul>
+                    <li><strong>ML/AI:</strong> scikit-learn, XGBoost, Random Forest, YOLOv11 (Ultralytics), PyTorch</li>
+                    <li><strong>Explainability:</strong> SHAP, imbalanced-learn (SMOTE)</li>
+                    <li><strong>API:</strong> FastAPI, Uvicorn</li>
+                    <li><strong>Dashboard:</strong> Streamlit, Plotly (4 interactive tabs)</li>
+                    <li><strong>Data:</strong> pandas, numpy, opencv-python, scipy</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    System Visualizations
+                </h3>
+                <p class="text-justify">
+                    The following visualizations demonstrate key components of the ITS-XAI system, including explainability interfaces, training pipelines, and feature analysis tools.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h4>SHAP Waterfall Explanation</h4>
+                <center>
+                    <img src="../../images/ITS_AI_1.png" class="img-responsive" alt="SHAP Waterfall Explanation" style="max-height: 500px; width: auto;">
+                </center>
+                <br>
+                <p class="text-justify">
+                    Detailed SHAP waterfall visualization showing individual feature contributions to the model's prediction. Each bar represents a feature's impact, with the cumulative effect determining the final classification outcome.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h4>Counterfactual Analysis Interface</h4>
+                <center>
+                    <img src="../../images/ITS_AI_2.png" class="img-responsive" alt="Counterfactual Analysis Interface" style="max-height: 500px; width: auto;">
+                </center>
+                <br>
+                <p class="text-justify">
+                    Interactive counterfactual analysis interface enabling engineers to explore "what-if" scenarios. The system identifies minimal parameter changes needed to flip predictions, providing actionable process optimization recommendations.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h4>LIME vs SHAP Comparison</h4>
+                <center>
+                    <img src="../../images/ITS_AI_3.png" class="img-responsive" alt="LIME vs SHAP Comparison" style="max-height: 500px; width: auto;">
+                </center>
+                <br>
+                <p class="text-justify">
+                    Side-by-side comparison of LIME (Local Interpretable Model-agnostic Explanations) and SHAP explanation methods. This visualization demonstrates how different XAI techniques interpret the same prediction, validating explanation consistency.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h4>XGBoost Training Pipeline</h4>
+                <center>
+                    <img src="../../images/ITS_AI_4.png" class="img-responsive" alt="XGBoost Training Pipeline" style="max-height: 500px; width: auto;">
+                </center>
+                <br>
+                <p class="text-justify">
+                    Complete XGBoost meta-classifier training pipeline visualization. Shows the data preprocessing, cross-validation, hyperparameter tuning, and model evaluation stages that achieve the 0.9462 F1-score performance.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h4>Feature Selection Pipeline</h4>
+                <center>
+                    <img src="../../images/ITS_AI_5.png" class="img-responsive" alt="Feature Selection Pipeline" style="max-height: 500px; width: auto;">
+                </center>
+                <br>
+                <p class="text-justify">
+                    Automated feature selection pipeline reducing 603 raw sensor features to the most predictive subset. Combines statistical filtering, recursive feature elimination, and importance-based selection to optimize model performance.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

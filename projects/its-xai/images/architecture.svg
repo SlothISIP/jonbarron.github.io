@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420">
+  <defs>
+    <linearGradient id="itsIn" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#2196F3"/><stop offset="100%" style="stop-color:#1565C0"/></linearGradient>
+    <linearGradient id="itsSen" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#9C27B0"/><stop offset="100%" style="stop-color:#7B1FA2"/></linearGradient>
+    <linearGradient id="itsVis" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#FF9800"/><stop offset="100%" style="stop-color:#F57C00"/></linearGradient>
+    <linearGradient id="itsFus" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#E91E63"/><stop offset="100%" style="stop-color:#C2185B"/></linearGradient>
+    <linearGradient id="itsXai" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#4CAF50"/><stop offset="100%" style="stop-color:#388E3C"/></linearGradient>
+  </defs>
+  <text x="400" y="30" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#333">ITS AI XAI: Multimodal Fusion Pipeline</text>
+  <text x="400" y="50" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">F1: 0.9462 | Latency: 67.3ms | 95.91% Recall</text>
+  <rect x="40" y="80" width="120" height="140" rx="8" fill="url(#itsIn)" stroke="#0D47A1" stroke-width="2"/>
+  <text x="100" y="105" text-anchor="middle" font-family="Arial" font-size="13" fill="white" font-weight="bold">Input</text>
+  <text x="100" y="135" text-anchor="middle" font-family="Arial" font-size="10" fill="white">Sensor Data</text>
+  <text x="100" y="155" text-anchor="middle" font-family="Arial" font-size="9" fill="#BBDEFB">603 features</text>
+  <text x="100" y="185" text-anchor="middle" font-family="Arial" font-size="10" fill="white">PCB Image</text>
+  <text x="100" y="205" text-anchor="middle" font-family="Arial" font-size="9" fill="#BBDEFB">640x640</text>
+  <path d="M160 120 L190 100" stroke="#666" stroke-width="2"/>
+  <path d="M160 180 L190 200" stroke="#666" stroke-width="2"/>
+  <rect x="200" y="70" width="150" height="80" rx="8" fill="url(#itsSen)" stroke="#6A1B9A" stroke-width="2"/>
+  <text x="275" y="95" text-anchor="middle" font-family="Arial" font-size="12" fill="white" font-weight="bold">Sensor Model</text>
+  <text x="275" y="120" text-anchor="middle" font-family="Arial" font-size="10" fill="white">Random Forest</text>
+  <text x="275" y="140" text-anchor="middle" font-family="Arial" font-size="9" fill="#E1BEE7">100 estimators</text>
+  <rect x="200" y="160" width="150" height="80" rx="8" fill="url(#itsVis)" stroke="#E65100" stroke-width="2"/>
+  <text x="275" y="185" text-anchor="middle" font-family="Arial" font-size="12" fill="white" font-weight="bold">Vision Model</text>
+  <text x="275" y="210" text-anchor="middle" font-family="Arial" font-size="10" fill="white">YOLOv11</text>
+  <text x="275" y="230" text-anchor="middle" font-family="Arial" font-size="9" fill="#FFE0B2">mAP@50: 93.51%</text>
+  <path d="M350 110 L400 150" stroke="#666" stroke-width="2"/>
+  <path d="M350 200 L400 160" stroke="#666" stroke-width="2"/>
+  <rect x="410" y="110" width="140" height="90" rx="8" fill="url(#itsFus)" stroke="#AD1457" stroke-width="2"/>
+  <text x="480" y="135" text-anchor="middle" font-family="Arial" font-size="12" fill="white" font-weight="bold">Meta-Classifier</text>
+  <text x="480" y="160" text-anchor="middle" font-family="Arial" font-size="10" fill="white">XGBoost Fusion</text>
+  <text x="480" y="185" text-anchor="middle" font-family="Arial" font-size="10" fill="#F8BBD9">F1: 0.9462</text>
+  <path d="M550 155 L600 155" stroke="#666" stroke-width="2"/>
+  <rect x="610" y="80" width="150" height="150" rx="8" fill="url(#itsXai)" stroke="#2E7D32" stroke-width="2"/>
+  <text x="685" y="105" text-anchor="middle" font-family="Arial" font-size="12" fill="white" font-weight="bold">Explainable AI</text>
+  <text x="685" y="135" text-anchor="middle" font-family="Arial" font-size="10" fill="white">SHAP Importance</text>
+  <text x="685" y="160" text-anchor="middle" font-family="Arial" font-size="10" fill="white">Counterfactual</text>
+  <text x="685" y="185" text-anchor="middle" font-family="Arial" font-size="10" fill="white">What-if Analysis</text>
+  <text x="685" y="215" text-anchor="middle" font-family="Arial" font-size="9" fill="#C8E6C9">Root Cause</text>
+  <rect x="40" y="270" width="720" height="130" rx="8" fill="#fafafa" stroke="#e0e0e0"/>
+  <text x="400" y="295" text-anchor="middle" font-family="Arial" font-size="14" fill="#333" font-weight="bold">Performance Metrics (All Targets Exceeded)</text>
+  <rect x="60" y="315" width="120" height="70" rx="6" fill="#E8F5E9" stroke="#4CAF50"/>
+  <text x="120" y="335" text-anchor="middle" font-family="Arial" font-size="10" fill="#388E3C" font-weight="bold">Meta F1</text>
+  <text x="120" y="360" text-anchor="middle" font-family="Arial" font-size="16" fill="#2E7D32" font-weight="bold">0.9462</text>
+  <text x="120" y="375" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">Target: 0.75</text>
+  <rect x="200" y="315" width="120" height="70" rx="6" fill="#E3F2FD" stroke="#2196F3"/>
+  <text x="260" y="335" text-anchor="middle" font-family="Arial" font-size="10" fill="#1565C0" font-weight="bold">Latency</text>
+  <text x="260" y="360" text-anchor="middle" font-family="Arial" font-size="16" fill="#1565C0" font-weight="bold">67.3ms</text>
+  <text x="260" y="375" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">Target: 120ms</text>
+  <rect x="340" y="315" width="120" height="70" rx="6" fill="#FFF3E0" stroke="#FF9800"/>
+  <text x="400" y="335" text-anchor="middle" font-family="Arial" font-size="10" fill="#E65100" font-weight="bold">YOLO mAP</text>
+  <text x="400" y="360" text-anchor="middle" font-family="Arial" font-size="16" fill="#E65100" font-weight="bold">93.51%</text>
+  <text x="400" y="375" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">Target: 90%</text>
+  <rect x="480" y="315" width="120" height="70" rx="6" fill="#FCE4EC" stroke="#E91E63"/>
+  <text x="540" y="335" text-anchor="middle" font-family="Arial" font-size="10" fill="#C2185B" font-weight="bold">Recall</text>
+  <text x="540" y="360" text-anchor="middle" font-family="Arial" font-size="16" fill="#C2185B" font-weight="bold">95.91%</text>
+  <text x="540" y="375" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">Target: 90%</text>
+  <rect x="620" y="315" width="120" height="70" rx="6" fill="#F3E5F5" stroke="#9C27B0"/>
+  <text x="680" y="335" text-anchor="middle" font-family="Arial" font-size="10" fill="#7B1FA2" font-weight="bold">Coverage</text>
+  <text x="680" y="360" text-anchor="middle" font-family="Arial" font-size="16" fill="#7B1FA2" font-weight="bold">6/6</text>
+  <text x="680" y="375" text-anchor="middle" font-family="Arial" font-size="9" fill="#666">100%</text>
+</svg>

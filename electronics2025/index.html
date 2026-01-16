@@ -54,13 +54,13 @@
             <div class="col-md-12 text-center">
                 <ul class="list-inline">
                     <li>
-                        <a href="https://jonbarron.info/">
+                        <a href="../index.html">
                           Ju O Kim
                         </a>
                         </br>Keimyung University
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="https://sites.google.com/view/dwoolee/deokwoo-lee">
                             Deokwoo Lee
                         </a>
                         </br>Keimyung University
@@ -131,7 +131,7 @@ We propose a CNN-LSTM hybrid architecture with DTW-based SMOTE data augmentation
                     Our experimental evaluation demonstrates that the proposed DTW-enhanced CNN-LSTM approach achieves 94.3% classification accuracy in distinguishing normal breathing from apnea events using UWB radar data. This represents a significant improvement over baseline methods:
                 </p>
                 <ul>
-                    <li>Standard CNN-LSTM without DTW-SMOTE: 87.6% accuracy</li>
+                    <li>Non-augmented CNN-LSTM: 82.3% accuracy</li>
                     <li>Traditional machine learning (SVM, Random Forest): 82-85% accuracy</li>
                     <li>LSTM-only architecture: 88.9% accuracy</li>
                     <li>CNN-only architecture: 86.2% accuracy</li>
@@ -154,7 +154,7 @@ We propose a CNN-LSTM hybrid architecture with DTW-based SMOTE data augmentation
                     <image src="../images/electronics2025_roc.jpg" class="img-responsive" alt="ROC Curves">
                 </p>
                 <p class="text-justify">
-                    The Receiver Operating Characteristic (ROC) curves demonstrate the superior discriminative ability of our DTW-enhanced CNN-LSTM model across different operating points. The Area Under the Curve (AUC) of 0.97 indicates excellent classification performance. The curves show that our method maintains high true positive rates while keeping false positive rates low across various threshold settings, providing flexibility for deployment in different clinical scenarios with varying sensitivity requirements.
+                    The Receiver Operating Characteristic (ROC) curves demonstrate the superior discriminative ability of our DTW-enhanced CNN-LSTM model across different operating points. The Area Under the Curve (AUC) of 0.969 indicates excellent classification performance. The curves show that our method maintains high true positive rates while keeping false positive rates low across various threshold settings, providing flexibility for deployment in different clinical scenarios with varying sensitivity requirements.
                 </p>
             </div>
         </div>
@@ -168,7 +168,7 @@ We propose a CNN-LSTM hybrid architecture with DTW-based SMOTE data augmentation
                     <image src="../images/electronics2025_ablation.jpg" class="img-responsive" alt="Ablation Study">
                 </p>
                 <p class="text-justify">
-                    The ablation study systematically evaluates the contribution of each component in our proposed framework. Results show that both the CNN-LSTM architecture and DTW-based SMOTE augmentation are essential for achieving optimal performance. Removing the DTW component from SMOTE reduces accuracy by 6.7%, while using only CNN or LSTM alone results in 8.1% and 5.4% accuracy drops respectively. This analysis confirms that the synergy between our architectural design and data augmentation strategy is key to overcoming data scarcity challenges in respiratory monitoring applications.
+                    The ablation study systematically evaluates the contribution of each component in our proposed framework. Results show that both the CNN-LSTM architecture and DTW-based SMOTE augmentation are essential for achieving optimal performance. Removing the DTW component from SMOTE reduces accuracy by approximately 5.2% (from 94.3% to 89.1%), while using only CNN or LSTM alone results in 8.1% and 5.4% accuracy drops respectively. This analysis confirms that the synergy between our architectural design and data augmentation strategy is key to overcoming data scarcity challenges in respiratory monitoring applications.
                 </p>
             </div>
         </div>

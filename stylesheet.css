@@ -140,3 +140,121 @@ span.highlight {
     display: inline-block;
     border-radius: 10px;
 }
+
+/* ============================================
+   PUBLICATION BADGES
+   ============================================ */
+.pub-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  margin-left: 6px;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
+
+.pub-badge-sci {
+  background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(13, 110, 253, 0.3);
+}
+
+.pub-badge-scie {
+  background: linear-gradient(135deg, #198754 0%, #146c43 100%);
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(25, 135, 84, 0.3);
+}
+
+.pub-badge-conf {
+  background: linear-gradient(135deg, #6c757d 0%, #5c636a 100%);
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(108, 117, 125, 0.3);
+}
+
+.pub-badge-domestic {
+  background: linear-gradient(135deg, #fd7e14 0%, #e96b0c 100%);
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(253, 126, 20, 0.3);
+}
+
+/* ============================================
+   SECTION SEPARATORS
+   ============================================ */
+.section-heading {
+  position: relative;
+  padding-bottom: 12px;
+  margin-bottom: 8px;
+}
+
+.section-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #1772d0 0%, #4a9edd 100%);
+  border-radius: 2px;
+}
+
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #e0e0e0 20%, #e0e0e0 80%, transparent 100%);
+  margin: 32px 0;
+}
+
+/* ============================================
+   CONTACT LINKS WITH ICONS
+   ============================================ */
+.contact-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  transition: all 0.2s ease;
+  color: #1772d0;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.contact-link:hover {
+  background: #1772d0;
+  border-color: #1772d0;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(23, 114, 208, 0.25);
+}
+
+.contact-link:hover svg {
+  fill: #ffffff;
+}
+
+.contact-link svg {
+  width: 16px;
+  height: 16px;
+  fill: #1772d0;
+  transition: fill 0.2s ease;
+}
+
+.contact-separator {
+  color: #dee2e6;
+  font-weight: 300;
+}
