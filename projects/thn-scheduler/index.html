@@ -32,7 +32,7 @@
             <h2 class="col-md-12 text-center">
                 THN AI Production Scheduler
                 <small>
-                    Intelligent Production Planning System
+                    67,738 Circuits | 21 Machines | 15 Algorithms
                 </small>
             </h2>
         </div>
@@ -55,7 +55,7 @@
                     Overview
                 </h3>
                 <p class="text-justify">
-                    THN AI Production Scheduler is an AI-powered production scheduling system designed for manufacturing optimization. The system implements multi-objective optimization algorithms for resource allocation and workflow management in industrial settings, with an interactive dashboard for real-time monitoring and control.
+                    THN AI Production Scheduler is an intelligent production planning system for wire harness manufacturing. The system optimizes scheduling for 67,738 circuits across 21 machine groups using 15 different algorithms, achieving 22% improvement in load balance (CV 0.35) and 32% reduction in applicator changes (APP 120).
                 </p>
             </div>
         </div>
@@ -63,14 +63,14 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Dashboard Interface
+                    Gantt Chart Visualization
                 </h3>
                 <center>
-                    <img src="images/01_main_scheduler_tab.png" class="img-responsive" alt="Main Scheduler Dashboard" style="max-height: 500px; width: auto; border: 1px solid #ddd;">
+                    <img src="images/THN_1.png" class="img-responsive" alt="Gantt Chart Visualization">
                 </center>
                 <br>
                 <p class="text-justify">
-                    The main scheduler dashboard provides a comprehensive view of production planning. Users can configure scheduling parameters, view current job status, and monitor resource utilization in real-time. The interface supports multiple scheduling modes and constraint configurations.
+                    Enterprise-grade Gantt chart showing the 5-day production schedule (December 8-12) across all 21 machine groups. Task bars are color-coded by wire gauge (SQ 0.22-3.0mm²) with applicator change markers (APP). The dark theme with neon cyan accents provides optimal visibility for factory floor displays.
                 </p>
             </div>
         </div>
@@ -78,14 +78,14 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Production Gantt Chart Visualization
+                    Factory Floor Layout (3D)
                 </h3>
                 <center>
-                    <img src="images/gantt_professional.png" class="img-responsive" alt="Professional Gantt Chart" style="max-height: 600px; width: auto; border: 1px solid #1a3a5c;">
+                    <img src="images/THN_2.png" class="img-responsive" alt="Factory Floor Layout 3D">
                 </center>
                 <br>
                 <p class="text-justify">
-                    Enterprise-grade Gantt chart visualization shows the complete 5-day production schedule (December 8-12) across all 21 machine groups (M01-M21) managing 67,738 wire harness circuits. Task bars are color-coded by wire gauge (SQ range 0.22-3.0mm²) with a gradient from green (small gauge) to red (large gauge circuits). Vertical red dashed markers (▼APP) indicate applicator changes requiring setup time. The left panel displays machine load percentages with capacity bars, while the dark theme with neon cyan accents provides optimal visibility for factory floor displays. Key metrics in the header show CV (Load Balance) of 0.35 representing 22% improvement over production baseline, APP (Applicator Changes) of 120 reflecting 32% reduction in setup time, and total Makespan of 14,250 minutes for completing all circuits.
+                    Three-dimensional visualization of the factory floor layout showing machine placement, material flow paths, and workstation configurations. The spatial representation aids in understanding production line organization and optimizing resource positioning for the wire harness assembly process.
                 </p>
             </div>
         </div>
@@ -93,14 +93,14 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    5-Day Optimization Results
+                    Real-time Monitoring Dashboard
                 </h3>
                 <center>
-                    <img src="images/04_step06_results.png" class="img-responsive" alt="Optimization Results" style="max-height: 500px; width: auto; border: 1px solid #ddd;">
+                    <img src="images/THN_3.png" class="img-responsive" alt="Real-time Monitoring Dashboard">
                 </center>
                 <br>
                 <p class="text-justify">
-                    The 5-day scheduling optimization comparison shows comprehensive performance metrics across six dimensions: Load Balancing Performance (CV reduction), Tool Change Efficiency (APP optimization), Circuit Reassignments (flexibility), Daily Workload Distribution (makespan per day), Overall Equipment Effectiveness (OEE), and Quality Metrics. The dashboard compares Step05 baseline, optimized algorithm results, and Step06 final schedule, demonstrating significant improvements in load balance (CV from 0.46 to 0.36), setup time reduction (APP from 150 to 120 changes), and overall completion time optimization across all 21 machines.
+                    Comprehensive Streamlit dashboard providing real-time visibility into production metrics, machine status, and schedule adherence. The interface enables operators to track KPIs including CV (Load Balance), APP (Applicator Changes), and Makespan while responding quickly to production deviations.
                 </p>
             </div>
         </div>
@@ -108,14 +108,14 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Algorithm Comparison
+                    Algorithm Performance Comparison
                 </h3>
                 <center>
-                    <img src="images/comparison_summary_visualization.png" class="img-responsive" alt="Algorithm Comparison" style="max-height: 500px; width: auto;">
+                    <img src="images/THN_4.png" class="img-responsive" alt="Algorithm Performance Comparison">
                 </center>
                 <br>
                 <p class="text-justify">
-                    Performance comparison across 15 scheduling algorithms evaluating load balance (CV), setup changes (APP), and completion time (Makespan). The comparison highlights top-performing algorithms including ALNS (Adaptive Large Neighborhood Search) with CV 0.35 and best overall quality, Two-Phase Balanced achieving perfect load balance (CV 0.00), and CP-SAT providing optimal solutions for smaller datasets. The visualization enables data-driven algorithm selection based on specific production priorities such as minimizing setup time, balancing workload, or reducing total completion time.
+                    Comparative analysis of 15 scheduling algorithms including ALNS (Adaptive Large Neighborhood Search), Two-Phase Balanced, and CP-SAT. The visualization highlights trade-offs between load balancing (CV), setup time minimization (APP), and makespan reduction, enabling data-driven algorithm selection.
                 </p>
             </div>
         </div>
@@ -123,164 +123,51 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Key Features
+                    Convergence Plot Analysis
                 </h3>
-                <ul>
-                    <li><strong>Multi-Objective Optimization:</strong> Balances multiple production goals (throughput, cost, quality, due dates)</li>
-                    <li><strong>Resource Allocation:</strong> Optimizes assignment of machines, workers, and materials</li>
-                    <li><strong>Workflow Management:</strong> Sequences production tasks for maximum efficiency</li>
-                    <li><strong>Constraint Handling:</strong> Respects machine capabilities, labor rules, and delivery deadlines</li>
-                    <li><strong>Real-time Dashboard:</strong> Interactive visualization of schedules and metrics</li>
-                </ul>
+                <center>
+                    <img src="images/THN_5.png" class="img-responsive" alt="Convergence Plot Analysis">
+                </center>
+                <br>
+                <p class="text-justify">
+                    Convergence analysis showing optimization progress over iterations for various scheduling algorithms. The plot demonstrates solution quality improvement over time, helping identify optimal stopping criteria and algorithm efficiency characteristics for production scheduling.
+                </p>
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Scheduling Capabilities
+                    Technical Specifications
                 </h3>
                 <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Scheduling Type</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
                     <tbody>
                         <tr>
-                            <td>Job Shop</td>
-                            <td>Optimal sequencing for multiple jobs across different machines</td>
+                            <td><strong>Total Circuits</strong></td>
+                            <td>67,738</td>
                         </tr>
                         <tr>
-                            <td>Flow Shop</td>
-                            <td>Sequential processing optimization for linear workflows</td>
+                            <td><strong>Machine Groups</strong></td>
+                            <td>21 (M01-M21)</td>
                         </tr>
                         <tr>
-                            <td>Flexible Manufacturing</td>
-                            <td>Dynamic routing and machine selection</td>
+                            <td><strong>Scheduling Algorithms</strong></td>
+                            <td>15 (ALNS, CP-SAT, Two-Phase, etc.)</td>
                         </tr>
                         <tr>
-                            <td>Batch Processing</td>
-                            <td>Grouping and scheduling of batch operations</td>
+                            <td><strong>Load Balance (CV)</strong></td>
+                            <td>0.35 (22% improvement)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Applicator Changes</strong></td>
+                            <td>120 (32% reduction)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tech Stack</strong></td>
+                            <td>Python, FastAPI, Streamlit, Plotly</td>
                         </tr>
                     </tbody>
                 </table>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Optimization Objectives
-                </h3>
-                <ul>
-                    <li>Minimize makespan (total completion time)</li>
-                    <li>Minimize tardiness (late deliveries)</li>
-                    <li>Maximize machine utilization</li>
-                    <li>Minimize setup times and changeovers</li>
-                    <li>Balance workload across resources</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Technology Stack
-                </h3>
-                <ul>
-                    <li><strong>Backend:</strong> Python, FastAPI</li>
-                    <li><strong>Frontend:</strong> Streamlit Dashboard</li>
-                    <li><strong>Optimization:</strong> Custom scheduling algorithms, heuristics</li>
-                    <li><strong>Visualization:</strong> Plotly, Gantt charts, resource utilization plots</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    System Visualizations
-                </h3>
-                <p class="text-justify">
-                    The following visualizations demonstrate key aspects of the THN AI Production Scheduler system, from project planning through optimization analysis.
-                </p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h4>
-                    Gantt Chart Visualization
-                </h4>
-                <center>
-                    <img src="images/THN_1.png" class="img-responsive" alt="Gantt Chart Visualization" style="max-height: 500px; width: auto; border: 1px solid #ddd;">
-                </center>
-                <br>
-                <p class="text-justify">
-                    Interactive Gantt chart displaying production schedule timelines across multiple machine groups. The visualization shows task dependencies, resource allocation, and critical path analysis for optimizing manufacturing workflows.
-                </p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h4>
-                    Factory Floor Layout (3D)
-                </h4>
-                <center>
-                    <img src="images/THN_2.png" class="img-responsive" alt="Factory Floor Layout 3D" style="max-height: 500px; width: auto; border: 1px solid #ddd;">
-                </center>
-                <br>
-                <p class="text-justify">
-                    Three-dimensional visualization of the factory floor layout showing machine placement, material flow paths, and workstation configurations. This spatial representation aids in understanding production line organization and optimizing resource positioning.
-                </p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h4>
-                    Real-time Monitoring Dashboard
-                </h4>
-                <center>
-                    <img src="images/THN_3.png" class="img-responsive" alt="Real-time Monitoring Dashboard" style="max-height: 500px; width: auto; border: 1px solid #ddd;">
-                </center>
-                <br>
-                <p class="text-justify">
-                    Comprehensive monitoring dashboard providing real-time visibility into production metrics, machine status, and schedule adherence. The interface enables operators to track key performance indicators and respond quickly to production deviations.
-                </p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h4>
-                    Algorithm Performance Comparison
-                </h4>
-                <center>
-                    <img src="images/THN_4.png" class="img-responsive" alt="Algorithm Performance Comparison" style="max-height: 500px; width: auto; border: 1px solid #ddd;">
-                </center>
-                <br>
-                <p class="text-justify">
-                    Comparative analysis of different scheduling algorithms showing performance metrics across multiple evaluation criteria. The visualization highlights trade-offs between optimization approaches for load balancing, setup time minimization, and makespan reduction.
-                </p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h4>
-                    Convergence Plot Analysis
-                </h4>
-                <center>
-                    <img src="images/THN_5.png" class="img-responsive" alt="Convergence Plot Analysis" style="max-height: 500px; width: auto; border: 1px solid #ddd;">
-                </center>
-                <br>
-                <p class="text-justify">
-                    Convergence analysis showing optimization progress over iterations for various scheduling algorithms. The plot demonstrates solution quality improvement over time, helping identify optimal stopping criteria and algorithm efficiency characteristics.
-                </p>
             </div>
         </div>
 

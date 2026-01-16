@@ -55,7 +55,7 @@
                     Overview
                 </h3>
                 <p class="text-justify">
-                    Industrial NeRF Factory is an end-to-end manufacturing AI platform that integrates Neural Radiance Fields (NeRF) for synthetic data generation with digital twin simulation capabilities. The platform enables sim-to-real transfer for industrial applications, combining 3D reconstruction with manufacturing process optimization.
+                    Industrial NeRF Factory is an end-to-end manufacturing AI platform that integrates Neural Radiance Fields (NeRF) for synthetic data generation with digital twin simulation capabilities. The 8-phase pipeline enables sim-to-real transfer for industrial applications, achieving 94.2% simulation success rate and 89.7% real-world deployment performance.
                 </p>
             </div>
         </div>
@@ -63,14 +63,14 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    8-Phase Pipeline Architecture
+                    Training Pipeline Architecture
                 </h3>
                 <center>
-                    <img src="images/pipeline.svg" class="img-responsive" alt="8-Phase Pipeline" style="max-height: 480px; width: auto;">
+                    <img src="images/Nerf_1.png" class="img-responsive" alt="Training Pipeline Architecture">
                 </center>
                 <br>
                 <p class="text-justify">
-                    The platform implements a comprehensive 8-phase pipeline: Data Collection, NeRF Training, Synthetic Data Generation, Digital Twin Creation, Simulation, Model Training, Validation, and Production Deployment. Each phase is designed for manufacturing-specific requirements with robust testing and monitoring.
+                    Comprehensive visualization of the NeRF training pipeline architecture, illustrating the data flow from raw multi-view images through neural network training to final 3D scene reconstruction. The pipeline incorporates positional encoding, ray marching, and volume rendering stages for photorealistic novel view synthesis.
                 </p>
             </div>
         </div>
@@ -78,122 +78,14 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Project Statistics
-                </h3>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Metric</th>
-                            <th>Value</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Total Lines of Code</td>
-                            <td><strong>15,704+</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Test Suite</td>
-                            <td>157 tests</td>
-                        </tr>
-                        <tr>
-                            <td>Pipeline Phases</td>
-                            <td>8</td>
-                        </tr>
-                        <tr>
-                            <td>Documentation Files</td>
-                            <td>30+</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Phase Details
-                </h3>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Phase</th>
-                            <th>Name</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Data Collection</td>
-                            <td>Industrial image/video acquisition with calibration</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>NeRF Training</td>
-                            <td>Neural radiance field reconstruction from multi-view images</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Synthetic Data</td>
-                            <td>Novel view synthesis for training data augmentation</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Digital Twin</td>
-                            <td>Virtual factory environment modeling</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Simulation</td>
-                            <td>Process simulation with physics-based rendering</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Model Training</td>
-                            <td>AI model training on synthetic + real data</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>Validation</td>
-                            <td>Cross-domain validation and accuracy assessment</td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>Deployment</td>
-                            <td>Production deployment with monitoring</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Key Features
-                </h3>
-                <ul>
-                    <li><strong>NeRF Integration:</strong> Novel view synthesis for unlimited training data generation</li>
-                    <li><strong>Digital Twin:</strong> Virtual factory environment for process simulation</li>
-                    <li><strong>Sim-to-Real Transfer:</strong> Domain adaptation techniques for real-world deployment</li>
-                    <li><strong>Acoustic Vision:</strong> Audio-visual fusion for machinery monitoring</li>
-                    <li><strong>Robot Integration:</strong> ROS 2 compatibility for robot arm deployment</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    NeRF 3D Reconstruction Results
+                    Sim-to-Real Transfer Comparison
                 </h3>
                 <center>
-                    <img src="images/nerf_result.png" class="img-responsive" alt="NeRF 3D Reconstruction" style="max-height: 400px; width: auto;">
+                    <img src="images/Nerf_2.png" class="img-responsive" alt="Sim-to-Real Transfer Comparison">
                 </center>
                 <br>
                 <p class="text-justify">
-                    NeRF reconstruction pipeline showing the complete process from 36 input photographs to photorealistic novel view synthesis. The input views capture the industrial metal bracket from multiple angles. The intermediate point cloud representation shows the initial 3D structure, and the final NeRF render demonstrates photorealistic novel view synthesis with accurate geometry and material properties.
+                    Side-by-side comparison demonstrating the sim-to-real transfer capabilities. Synthetic renderings generated from the digital twin alongside corresponding real-world captures highlight domain adaptation techniques that enable successful transfer of trained models to physical environments with minimal performance degradation.
                 </p>
             </div>
         </div>
@@ -201,14 +93,14 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Sim-to-Real Transfer Learning
+                    Multi-View Camera Input Grid
                 </h3>
                 <center>
-                    <img src="images/sim2real.png" class="img-responsive" alt="Sim-to-Real Transfer" style="max-height: 350px; width: auto;">
+                    <img src="images/Nerf_3.png" class="img-responsive" alt="Multi-View Camera Input Grid">
                 </center>
                 <br>
                 <p class="text-justify">
-                    Sim-to-Real transfer learning enables robot policies trained in simulation to deploy successfully on real hardware. The left panel shows training in a physics simulator with domain randomization, while the right panel demonstrates deployment on an actual industrial robot arm. The system achieves 94.2% success rate in simulation and maintains 89.7% performance when transferred to the real world.
+                    Grid visualization of the 36 camera viewpoints used for NeRF training. Each image captures the industrial target from a different angle, providing comprehensive coverage for accurate 3D reconstruction. Systematic multi-view acquisition ensures consistent lighting and calibrated camera poses.
                 </p>
             </div>
         </div>
@@ -216,49 +108,27 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    System Visualizations
+                    Rendering Quality Comparison
                 </h3>
-
-                <h4>Training Pipeline Architecture</h4>
                 <center>
-                    <img src="../../images/Nerf_1.png" class="img-responsive" alt="Training Pipeline Architecture" style="max-height: 500px; width: auto;">
+                    <img src="images/Nerf_4.png" class="img-responsive" alt="Rendering Quality Comparison">
                 </center>
-                <p class="text-justify">
-                    Comprehensive visualization of the NeRF training pipeline architecture, illustrating the data flow from raw multi-view images through neural network training to final 3D scene reconstruction. The pipeline incorporates positional encoding, ray marching, and volume rendering stages.
-                </p>
                 <br>
-
-                <h4>Sim-to-Real Transfer Comparison</h4>
-                <center>
-                    <img src="../../images/Nerf_2.png" class="img-responsive" alt="Sim-to-Real Transfer Comparison" style="max-height: 500px; width: auto;">
-                </center>
                 <p class="text-justify">
-                    Side-by-side comparison demonstrating the sim-to-real transfer capabilities. The visualization shows synthetic renderings generated from the digital twin alongside corresponding real-world captures, highlighting the domain adaptation techniques that enable successful transfer of trained models to physical environments.
+                    Quality comparison between different rendering methods and resolutions. The visualization demonstrates PSNR, SSIM, and LPIPS metrics across various NeRF configurations, highlighting trade-offs between rendering speed and visual fidelity for industrial inspection applications.
                 </p>
-                <br>
+            </div>
+        </div>
 
-                <h4>Multi-View Camera Input Grid (36 Angles)</h4>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Novel View Synthesis Results
+                </h3>
                 <center>
-                    <img src="../../images/Nerf_3.png" class="img-responsive" alt="Multi-View Camera Input Grid" style="max-height: 500px; width: auto;">
+                    <img src="images/Nerf_5.png" class="img-responsive" alt="Novel View Synthesis Results">
                 </center>
-                <p class="text-justify">
-                    Grid visualization of the 36 camera viewpoints used for NeRF training. Each image captures the industrial target from a different angle, providing comprehensive coverage for accurate 3D reconstruction. The systematic multi-view acquisition ensures consistent lighting and calibrated camera poses.
-                </p>
                 <br>
-
-                <h4>Rendering Quality Comparison</h4>
-                <center>
-                    <img src="../../images/Nerf_4.png" class="img-responsive" alt="Rendering Quality Comparison" style="max-height: 500px; width: auto;">
-                </center>
-                <p class="text-justify">
-                    Quality comparison between different rendering methods and resolutions. The visualization demonstrates PSNR, SSIM, and LPIPS metrics across various NeRF configurations, highlighting the trade-offs between rendering speed and visual fidelity for industrial inspection applications.
-                </p>
-                <br>
-
-                <h4>Novel View Synthesis Results</h4>
-                <center>
-                    <img src="../../images/Nerf_5.png" class="img-responsive" alt="Novel View Synthesis Results" style="max-height: 500px; width: auto;">
-                </center>
                 <p class="text-justify">
                     Gallery of novel view synthesis results generated by the trained NeRF model. These synthetic views demonstrate the system's ability to render photorealistic images from arbitrary camera positions not present in the training set, enabling unlimited synthetic data generation for downstream AI model training.
                 </p>
@@ -268,15 +138,36 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Technology Stack
+                    Technical Specifications
                 </h3>
-                <ul>
-                    <li><strong>3D Reconstruction:</strong> NeRF, Instant-NGP, Nerfstudio</li>
-                    <li><strong>Deep Learning:</strong> PyTorch, CUDA</li>
-                    <li><strong>Distributed Computing:</strong> Ray, Kubernetes</li>
-                    <li><strong>Robotics:</strong> ROS 2, MoveIt</li>
-                    <li><strong>API:</strong> FastAPI, gRPC</li>
-                </ul>
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <td><strong>Lines of Code</strong></td>
+                            <td>15,704+</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Test Suite</strong></td>
+                            <td>157 tests</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pipeline Phases</strong></td>
+                            <td>8 (Data Collection to Deployment)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3D Reconstruction</strong></td>
+                            <td>NeRF, Instant-NGP, Nerfstudio</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Robotics</strong></td>
+                            <td>ROS 2, MoveIt</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Infrastructure</strong></td>
+                            <td>Ray, Kubernetes, FastAPI, gRPC</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 

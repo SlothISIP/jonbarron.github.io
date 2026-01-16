@@ -32,7 +32,7 @@
             <h2 class="col-md-12 text-center">
                 AI Digital Twin Factory System
                 <small>
-                    Smart Manufacturing Platform
+                    Smart Manufacturing Platform | 87% Complete
                 </small>
             </h2>
         </div>
@@ -55,7 +55,7 @@
                     Overview
                 </h3>
                 <p class="text-justify">
-                    The AI Digital Twin Factory System is an integrated software architecture for smart manufacturing. It combines vision AI, digital twin simulation, predictive maintenance, and production scheduling to enable real-time monitoring and optimization of manufacturing processes.
+                    The AI Digital Twin Factory System is an integrated software architecture for smart manufacturing combining vision AI, SimPy-based digital twin simulation, predictive maintenance, and production scheduling. The microservices architecture enables real-time monitoring and optimization of manufacturing processes through a React dashboard.
                 </p>
             </div>
         </div>
@@ -63,14 +63,14 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    System Architecture
+                    Microservices Architecture Diagram
                 </h3>
                 <center>
-                    <img src="images/architecture.svg" class="img-responsive" alt="System Architecture" style="max-height: 400px; width: auto;">
+                    <img src="images/Digital_Twin_1.png" class="img-responsive" alt="Microservices Architecture Diagram">
                 </center>
                 <br>
                 <p class="text-justify">
-                    The microservices architecture centers around an API Gateway that orchestrates five core modules: Vision AI for real-time inspection, Digital Twin for SimPy-based simulation, Predictive Maintenance for failure prediction, Production Scheduling for AI optimization, and Real-time Monitoring through a React dashboard.
+                    Comprehensive microservices architecture showing the interconnection between Vision AI, Digital Twin, Predictive Maintenance, Production Scheduling, and Monitoring modules through the central API Gateway. Each service is independently deployable and scalable via Docker/Kubernetes.
                 </p>
             </div>
         </div>
@@ -78,177 +78,100 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Project Status
+                    Factory Monitoring Dashboard
+                </h3>
+                <center>
+                    <img src="images/Digital_Twin_2.png" class="img-responsive" alt="Factory Monitoring Dashboard">
+                </center>
+                <br>
+                <p class="text-justify">
+                    Real-time factory monitoring dashboard displaying live KPIs, machine status indicators (green=running, yellow=idle, red=down), production metrics, and alert notifications. The React-based interface provides comprehensive operational oversight with OEE tracking.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    API Documentation Interface
+                </h3>
+                <center>
+                    <img src="images/Digital_Twin_3.png" class="img-responsive" alt="API Documentation Interface">
+                </center>
+                <br>
+                <p class="text-justify">
+                    Interactive API documentation interface built with FastAPI/Swagger, providing clear endpoint definitions, request/response schemas, and testing capabilities for all microservices. Enables seamless integration with external systems and third-party applications.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    SimPy Event Processing Visualization
+                </h3>
+                <center>
+                    <img src="images/Digital_Twin_4.png" class="img-responsive" alt="SimPy Event Processing Visualization">
+                </center>
+                <br>
+                <p class="text-justify">
+                    Discrete-event simulation visualization showing the SimPy-based event queue processing, machine state transitions, and production flow modeling within the digital twin environment. Enables what-if analysis and process bottleneck identification.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Machine Performance Analysis
+                </h3>
+                <center>
+                    <img src="images/Digital_Twin_5.png" class="img-responsive" alt="Machine Performance Analysis">
+                </center>
+                <br>
+                <p class="text-justify">
+                    Detailed machine performance analysis dashboard showing OEE breakdown, availability trends, performance metrics, and quality indicators for individual equipment and production lines. Supports predictive maintenance scheduling and resource optimization.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Technical Specifications
                 </h3>
                 <table class="table table-bordered">
                     <tbody>
                         <tr>
-                            <td>Overall Completion</td>
+                            <td><strong>Overall Completion</strong></td>
                             <td>87%</td>
                         </tr>
                         <tr>
-                            <td>Test Suite</td>
+                            <td><strong>Test Suite</strong></td>
                             <td>172 tests</td>
                         </tr>
                         <tr>
-                            <td>Architecture</td>
-                            <td>Microservices</td>
+                            <td><strong>Architecture</strong></td>
+                            <td>Microservices (5 core modules)</td>
                         </tr>
                         <tr>
-                            <td>Simulation Engine</td>
-                            <td>SimPy-based</td>
+                            <td><strong>Simulation Engine</strong></td>
+                            <td>SimPy (Discrete-event)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Backend</strong></td>
+                            <td>Python, FastAPI</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Frontend</strong></td>
+                            <td>React Dashboard</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Infrastructure</strong></td>
+                            <td>Docker, Kubernetes</td>
                         </tr>
                     </tbody>
                 </table>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Core Modules
-                </h3>
-                <ul>
-                    <li><strong>Vision AI Module:</strong> Real-time visual inspection for defect detection</li>
-                    <li><strong>Digital Twin Module:</strong> SimPy-based process simulation for virtual factory modeling</li>
-                    <li><strong>Predictive Maintenance:</strong> Equipment health monitoring and failure prediction</li>
-                    <li><strong>Production Scheduling:</strong> AI-optimized workflow and resource allocation</li>
-                    <li><strong>Real-time Monitoring:</strong> Dashboard for live factory status visualization</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Digital Twin Simulation
-                </h3>
-                <p class="text-justify">
-                    The digital twin module uses SimPy (Simulation in Python) to create a virtual replica of the manufacturing process. Key features include:
-                </p>
-                <ul>
-                    <li>Discrete-event simulation of production lines</li>
-                    <li>Equipment state modeling and failure scenarios</li>
-                    <li>Process bottleneck identification</li>
-                    <li>What-if analysis for process optimization</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    3D Factory Simulation
-                </h3>
-                <center>
-                    <img src="images/factory_3d.png" class="img-responsive" alt="3D Factory Simulation" style="max-height: 500px; width: auto; border: 1px solid #ddd;">
-                </center>
-                <br>
-                <p class="text-justify">
-                    The 3D simulation environment visualizes the entire production floor in real-time. Machine states are color-coded (green = running, yellow = idle, red = down) with live OEE metrics displayed above each workstation. The simulation tracks material flow through conveyor systems and identifies bottlenecks in the production process.
-                </p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Real-time Monitoring Dashboard
-                </h3>
-                <center>
-                    <img src="images/dashboard_react.png" class="img-responsive" alt="Monitoring Dashboard" style="max-height: 450px; width: auto; border: 1px solid #ddd;">
-                </center>
-                <br>
-                <p class="text-justify">
-                    The React-based dashboard provides comprehensive factory monitoring with real-time KPI cards showing OEE, throughput, downtime, and quality metrics. The production rate chart displays 24-hour trends, while the machine status table provides instant visibility into each equipment's operational state and recent alerts.
-                </p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    System Architecture
-                </h3>
-                <p class="text-justify">
-                    The system follows a microservices architecture:
-                </p>
-                <ol>
-                    <li><strong>Data Layer:</strong> Time-series database for sensor data, PostgreSQL for operational data</li>
-                    <li><strong>Service Layer:</strong> Independent services for each core module</li>
-                    <li><strong>API Gateway:</strong> Unified REST API for all services</li>
-                    <li><strong>Frontend:</strong> React-based dashboard for visualization</li>
-                </ol>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Technology Stack
-                </h3>
-                <ul>
-                    <li><strong>Backend:</strong> Python, FastAPI</li>
-                    <li><strong>Simulation:</strong> SimPy</li>
-                    <li><strong>AI/ML:</strong> PyTorch, scikit-learn</li>
-                    <li><strong>Frontend:</strong> React</li>
-                    <li><strong>Infrastructure:</strong> Docker, Kubernetes</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    System Visualizations
-                </h3>
-                <p class="text-justify">
-                    The following visualizations illustrate the key components and interfaces of the AI Digital Twin Factory System.
-                </p>
-
-                <h4>Microservices Architecture Diagram</h4>
-                <center>
-                    <img src="../../images/Digital_Twin_1.png" class="img-responsive" alt="Microservices Architecture Diagram" style="max-height: 500px; width: auto; border: 1px solid #ddd;">
-                </center>
-                <p class="text-justify">
-                    Comprehensive microservices architecture showing the interconnection between Vision AI, Digital Twin, Predictive Maintenance, Production Scheduling, and Monitoring modules through the central API Gateway.
-                </p>
-                <br>
-
-                <h4>Factory Monitoring Dashboard</h4>
-                <center>
-                    <img src="../../images/Digital_Twin_2.png" class="img-responsive" alt="Factory Monitoring Dashboard" style="max-height: 500px; width: auto; border: 1px solid #ddd;">
-                </center>
-                <p class="text-justify">
-                    Real-time factory monitoring dashboard displaying live KPIs, machine status indicators, production metrics, and alert notifications for comprehensive operational oversight.
-                </p>
-                <br>
-
-                <h4>API Documentation Interface</h4>
-                <center>
-                    <img src="../../images/Digital_Twin_3.png" class="img-responsive" alt="API Documentation Interface" style="max-height: 500px; width: auto; border: 1px solid #ddd;">
-                </center>
-                <p class="text-justify">
-                    Interactive API documentation interface built with FastAPI/Swagger, providing clear endpoint definitions, request/response schemas, and testing capabilities for all microservices.
-                </p>
-                <br>
-
-                <h4>SimPy Event Processing Visualization</h4>
-                <center>
-                    <img src="../../images/Digital_Twin_4.png" class="img-responsive" alt="SimPy Event Processing Visualization" style="max-height: 500px; width: auto; border: 1px solid #ddd;">
-                </center>
-                <p class="text-justify">
-                    Discrete-event simulation visualization showing the SimPy-based event queue processing, machine state transitions, and production flow modeling within the digital twin environment.
-                </p>
-                <br>
-
-                <h4>Machine Performance Analysis</h4>
-                <center>
-                    <img src="../../images/Digital_Twin_5.png" class="img-responsive" alt="Machine Performance Analysis" style="max-height: 500px; width: auto; border: 1px solid #ddd;">
-                </center>
-                <p class="text-justify">
-                    Detailed machine performance analysis dashboard showing OEE breakdown, availability trends, performance metrics, and quality indicators for individual equipment and production lines.
-                </p>
             </div>
         </div>
 

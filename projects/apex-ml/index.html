@@ -32,7 +32,7 @@
             <h2 class="col-md-12 text-center">
                 APEX-ML: Enterprise AutoML Platform
                 <small>
-                    v3.2.0 - Production Ready
+                    81 Algorithms | 3-Phase Pipeline | GPU-Accelerated
                 </small>
             </h2>
         </div>
@@ -49,14 +49,13 @@
             </div>
         </div>
 
-
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
                     Overview
                 </h3>
                 <p class="text-justify">
-                    APEX-ML is an enterprise-grade AutoML platform featuring 81 algorithms with a sophisticated 3-phase pipeline for automated machine learning. The system provides GPU-accelerated training with comprehensive algorithm coverage from traditional ML to state-of-the-art deep learning approaches.
+                    APEX-ML is an enterprise-grade AutoML platform featuring 81 algorithms with a sophisticated 3-phase pipeline: Rapid Screening, Bayesian Optimization, and Ensemble Construction. The system achieves 99.7% accuracy on fraud detection benchmarks with 60-80% GPU utilization through distributed computing via Ray clusters.
                 </p>
             </div>
         </div>
@@ -64,14 +63,14 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    3-Phase Pipeline Architecture
+                    3-Phase Dashboard Overview
                 </h3>
                 <center>
-                    <img src="images/pipeline.svg" class="img-responsive" alt="3-Phase Pipeline" style="max-height: 420px; width: auto;">
+                    <img src="images/APEX_1.png" class="img-responsive" alt="3-Phase Dashboard Overview">
                 </center>
                 <br>
                 <p class="text-justify">
-                    The pipeline automates the entire ML workflow: Phase 1 rapidly screens all 81 algorithms in parallel using GPU acceleration. Phase 2 performs Bayesian hyperparameter optimization on top candidates using Optuna. Phase 3 constructs evolutionary ensembles through model stacking and dynamic weighting for optimal performance.
+                    The main dashboard provides a comprehensive view of the entire AutoML pipeline, displaying real-time status of all three phases. Phase 1 rapidly screens all 81 algorithms in parallel, Phase 2 performs Bayesian hyperparameter optimization on top candidates using Optuna, and Phase 3 constructs evolutionary ensembles through model stacking.
                 </p>
             </div>
         </div>
@@ -79,246 +78,96 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Performance Metrics
-                </h3>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Metric</th>
-                            <th>Value</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Best Accuracy (Credit Card Fraud)</td>
-                            <td><strong>99.7%</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Phase 1 Success Rate</td>
-                            <td>92.8%</td>
-                        </tr>
-                        <tr>
-                            <td>GPU Utilization</td>
-                            <td>60-80%</td>
-                        </tr>
-                        <tr>
-                            <td>Test Coverage</td>
-                            <td>69 tests passed</td>
-                        </tr>
-                        <tr>
-                            <td>Total Algorithms</td>
-                            <td>81</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Experiment Tracking Dashboard
+                    Bayesian Optimization Visualization
                 </h3>
                 <center>
-                    <img src="images/dashboard.png" class="img-responsive" alt="AutoML Experiment Tracker" style="max-height: 500px; width: auto; border: 1px solid #ddd;">
+                    <img src="images/APEX_2.png" class="img-responsive" alt="Bayesian Optimization Visualization">
                 </center>
                 <br>
-                <p class="text-justify">
-                    The experiment tracking dashboard provides comprehensive monitoring of all AutoML runs. The interface displays a comparison table with 15+ model experiments showing accuracy, F1 score, precision, recall, and training time metrics. The accuracy trend chart visualizes model performance evolution across iterations, enabling data scientists to quickly identify top-performing configurations and track experimentation progress.
-                </p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Pipeline Workflow Diagram
-                </h3>
-                <center>
-                    <img src="images/pipeline_flow.png" class="img-responsive" alt="3-Phase Pipeline Workflow" style="max-height: 300px; width: auto;">
-                </center>
-                <br>
-                <p class="text-justify">
-                    The 3-phase pipeline workflow illustrates the complete AutoML process. Phase 1 (Rapid Screening) evaluates all 81 algorithms in parallel using GPU acceleration. Phase 2 (Bayesian Optimization) focuses on top-K candidates for hyperparameter tuning with Optuna. Phase 3 (Ensemble) combines the best models through stacking and dynamic weighting to achieve optimal predictive performance.
-                </p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Algorithm Categories
-                </h3>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Category</th>
-                            <th>Count</th>
-                            <th>Examples</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Tree-Based</td>
-                            <td>8</td>
-                            <td>XGBoost, LightGBM, CatBoost, RandomForest</td>
-                        </tr>
-                        <tr>
-                            <td>Neural Networks</td>
-                            <td>8</td>
-                            <td>TabNet, FT-Transformer, SAINT, NODE</td>
-                        </tr>
-                        <tr>
-                            <td>Traditional ML</td>
-                            <td>18</td>
-                            <td>SVM, KNN, Naive Bayes, Logistic Regression</td>
-                        </tr>
-                        <tr>
-                            <td>Deep Tabular</td>
-                            <td>6</td>
-                            <td>TabNet, SAINT, NODE, VIME, DANet</td>
-                        </tr>
-                        <tr>
-                            <td>Foundation Models</td>
-                            <td>4</td>
-                            <td>TabPFN, TabLLM, DecisionTransformer</td>
-                        </tr>
-                        <tr>
-                            <td>Graph Neural Networks</td>
-                            <td>6</td>
-                            <td>GCN, GAT, GraphSAGE, MPNN</td>
-                        </tr>
-                        <tr>
-                            <td>Meta-Learning</td>
-                            <td>8</td>
-                            <td>MAML++, Prototypical Networks, Reptile</td>
-                        </tr>
-                        <tr>
-                            <td>Ensemble</td>
-                            <td>8</td>
-                            <td>Stacking, Voting, Dynamic Ensemble</td>
-                        </tr>
-                        <tr>
-                            <td>SOTA 2024-2025</td>
-                            <td>3</td>
-                            <td>ReMasker (ICLR'24), MambaTab (NeurIPS'24)</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Task Support
-                </h3>
-                <ul>
-                    <li><strong>Classification:</strong> 77 algorithms supported</li>
-                    <li><strong>Regression:</strong> 42 algorithms supported</li>
-                    <li><strong>GPU-capable:</strong> 45+ algorithms (57% of total)</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Configuration Modes
-                </h3>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Mode</th>
-                            <th>Algorithms</th>
-                            <th>Use Case</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><code>fast</code></td>
-                            <td>15</td>
-                            <td>Quick prototyping (~5 min)</td>
-                        </tr>
-                        <tr>
-                            <td><code>normal</code></td>
-                            <td>30</td>
-                            <td>Balanced (~15 min)</td>
-                        </tr>
-                        <tr>
-                            <td><code>production</code></td>
-                            <td>81</td>
-                            <td>Best accuracy (full run)</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Technology Stack
-                </h3>
-                <ul>
-                    <li><strong>Core:</strong> Python 3.10+, PyTorch, scikit-learn</li>
-                    <li><strong>Optimization:</strong> Optuna, XGBoost, LightGBM</li>
-                    <li><strong>Distributed:</strong> Ray cluster support</li>
-                    <li><strong>API:</strong> FastAPI (port 8010)</li>
-                    <li><strong>Hardware:</strong> RTX 4090 optimized (24GB VRAM)</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    System Visualizations
-                </h3>
-
-                <h4>3-Phase Dashboard Overview</h4>
-                <center>
-                    <img src="../../images/APEX_1.png" class="img-responsive" alt="3-Phase Dashboard Overview" style="max-height: 500px; width: auto; border: 1px solid #ddd;">
-                </center>
-                <p class="text-justify">
-                    The main dashboard provides a comprehensive view of the entire AutoML pipeline, displaying real-time status of all three phases: Rapid Screening, Bayesian Optimization, and Ensemble Construction. Users can monitor algorithm progress, GPU utilization, and performance metrics from a single unified interface.
-                </p>
-                <br>
-
-                <h4>Bayesian Optimization Visualization</h4>
-                <center>
-                    <img src="../../images/APEX_2.png" class="img-responsive" alt="Bayesian Optimization Visualization" style="max-height: 500px; width: auto; border: 1px solid #ddd;">
-                </center>
                 <p class="text-justify">
                     Phase 2 employs Optuna-based Bayesian optimization for hyperparameter tuning. This visualization shows the optimization landscape, acquisition function, and convergence trajectory as the system explores the hyperparameter space to find optimal configurations for top-performing algorithms.
                 </p>
-                <br>
+            </div>
+        </div>
 
-                <h4>Ensemble Performance Metrics</h4>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Ensemble Performance Metrics
+                </h3>
                 <center>
-                    <img src="../../images/APEX_3.png" class="img-responsive" alt="Ensemble Performance Metrics" style="max-height: 500px; width: auto; border: 1px solid #ddd;">
+                    <img src="images/APEX_3.png" class="img-responsive" alt="Ensemble Performance Metrics">
                 </center>
+                <br>
                 <p class="text-justify">
                     The ensemble performance dashboard displays comparative metrics across individual models and their combined ensemble predictions. Charts show accuracy, F1 score, precision, and recall improvements achieved through model stacking and dynamic weighting strategies in Phase 3.
                 </p>
-                <br>
+            </div>
+        </div>
 
-                <h4>Feature Importance Matrix</h4>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Feature Importance Matrix
+                </h3>
                 <center>
-                    <img src="../../images/APEX_4.png" class="img-responsive" alt="Feature Importance Matrix" style="max-height: 500px; width: auto; border: 1px solid #ddd;">
+                    <img src="images/APEX_4.png" class="img-responsive" alt="Feature Importance Matrix">
                 </center>
+                <br>
                 <p class="text-justify">
                     The feature importance matrix provides interpretability insights by aggregating feature rankings across multiple algorithms. This cross-model analysis reveals which input features consistently drive predictions, supporting feature selection and model explainability requirements.
                 </p>
-                <br>
+            </div>
+        </div>
 
-                <h4>Phase 1 Rapid Screening</h4>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Phase 1 Rapid Screening
+                </h3>
                 <center>
-                    <img src="../../images/APEX_5.png" class="img-responsive" alt="Phase 1 Rapid Screening" style="max-height: 500px; width: auto; border: 1px solid #ddd;">
+                    <img src="images/APEX_5.png" class="img-responsive" alt="Phase 1 Rapid Screening">
                 </center>
+                <br>
                 <p class="text-justify">
-                    The rapid screening interface shows parallel evaluation of all 81 algorithms during Phase 1. GPU-accelerated processing enables simultaneous model training with real-time progress tracking, algorithm success/failure status, and preliminary performance rankings to identify top candidates for optimization.
+                    The rapid screening interface shows parallel evaluation of all 81 algorithms during Phase 1. GPU-accelerated processing enables simultaneous model training with real-time progress tracking, algorithm success/failure status, and preliminary performance rankings.
                 </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Technical Specifications
+                </h3>
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <td><strong>Total Algorithms</strong></td>
+                            <td>81 (Tree-based, Neural Networks, Deep Tabular, Meta-Learning, etc.)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Best Accuracy</strong></td>
+                            <td>99.7% (Credit Card Fraud Detection)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>GPU Utilization</strong></td>
+                            <td>60-80% (RTX 4090 optimized)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Core Stack</strong></td>
+                            <td>Python 3.10+, PyTorch, scikit-learn, Optuna</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Distributed</strong></td>
+                            <td>Ray cluster support</td>
+                        </tr>
+                        <tr>
+                            <td><strong>API</strong></td>
+                            <td>FastAPI (port 8010)</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 
