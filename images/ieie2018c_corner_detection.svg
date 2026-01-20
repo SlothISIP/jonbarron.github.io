@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 400">
+  <defs>
+    <linearGradient id="imgGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34495e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cnnGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c0392b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="detectGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8e44ad;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9b59b6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="calibGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#27ae60;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2ecc71;stop-opacity:1" />
+    </linearGradient>
+    <marker id="arrow9" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#7f8c8d"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="850" height="400" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="425" y="28" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50" text-anchor="middle">Learning-Based Corner and Edge Detection for Camera Calibration</text>
+  <text x="425" y="48" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d" text-anchor="middle">CNN-Based Feature Extraction for Thermal Camera Checkerboard Detection</text>
+
+  <!-- Input Image with Checkerboard -->
+  <rect x="30" y="85" width="140" height="150" rx="10" fill="url(#imgGrad)"/>
+  <text x="100" y="112" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Input Image</text>
+  <line x1="45" y1="125" x2="155" y2="125" stroke="white" stroke-width="1" opacity="0.4"/>
+
+  <!-- Checkerboard pattern -->
+  <rect x="50" y="135" width="100" height="75" rx="4" fill="rgba(0,0,0,0.2)"/>
+  <g transform="translate(55, 140)">
+    <rect x="0" y="0" width="15" height="12" fill="white"/>
+    <rect x="15" y="0" width="15" height="12" fill="#555"/>
+    <rect x="30" y="0" width="15" height="12" fill="white"/>
+    <rect x="45" y="0" width="15" height="12" fill="#555"/>
+    <rect x="60" y="0" width="15" height="12" fill="white"/>
+    <rect x="75" y="0" width="15" height="12" fill="#555"/>
+    <rect x="0" y="12" width="15" height="12" fill="#555"/>
+    <rect x="15" y="12" width="15" height="12" fill="white"/>
+    <rect x="30" y="12" width="15" height="12" fill="#555"/>
+    <rect x="45" y="12" width="15" height="12" fill="white"/>
+    <rect x="60" y="12" width="15" height="12" fill="#555"/>
+    <rect x="75" y="12" width="15" height="12" fill="white"/>
+    <rect x="0" y="24" width="15" height="12" fill="white"/>
+    <rect x="15" y="24" width="15" height="12" fill="#555"/>
+    <rect x="30" y="24" width="15" height="12" fill="white"/>
+    <rect x="45" y="24" width="15" height="12" fill="#555"/>
+    <rect x="60" y="24" width="15" height="12" fill="white"/>
+    <rect x="75" y="24" width="15" height="12" fill="#555"/>
+    <rect x="0" y="36" width="15" height="12" fill="#555"/>
+    <rect x="15" y="36" width="15" height="12" fill="white"/>
+    <rect x="30" y="36" width="15" height="12" fill="#555"/>
+    <rect x="45" y="36" width="15" height="12" fill="white"/>
+    <rect x="60" y="36" width="15" height="12" fill="#555"/>
+    <rect x="75" y="36" width="15" height="12" fill="white"/>
+    <rect x="0" y="48" width="15" height="12" fill="white"/>
+    <rect x="15" y="48" width="15" height="12" fill="#555"/>
+    <rect x="30" y="48" width="15" height="12" fill="white"/>
+    <rect x="45" y="48" width="15" height="12" fill="#555"/>
+    <rect x="60" y="48" width="15" height="12" fill="white"/>
+    <rect x="75" y="48" width="15" height="12" fill="#555"/>
+  </g>
+
+  <text x="100" y="225" font-family="Arial, sans-serif" font-size="8" fill="#bdc3c7" text-anchor="middle">Checkerboard Pattern</text>
+
+  <!-- Arrow -->
+  <path d="M 175 160 L 205 160" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow9)"/>
+
+  <!-- CNN Corner Detection -->
+  <rect x="210" y="75" width="160" height="170" rx="10" fill="url(#cnnGrad2)"/>
+  <text x="290" y="103" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">CNN Corner</text>
+  <text x="290" y="120" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Detection</text>
+  <line x1="225" y1="132" x2="355" y2="132" stroke="white" stroke-width="1" opacity="0.4"/>
+
+  <!-- Network layers -->
+  <rect x="225" y="142" width="130" height="22" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <text x="290" y="157" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">Conv + ReLU + Pool</text>
+
+  <rect x="225" y="170" width="130" height="22" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <text x="290" y="185" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">Conv + ReLU + Pool</text>
+
+  <rect x="225" y="198" width="130" height="22" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <text x="290" y="213" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">Fully Connected</text>
+
+  <text x="290" y="238" font-family="Arial, sans-serif" font-size="8" fill="#fadbd8" text-anchor="middle">Sub-pixel Accuracy</text>
+
+  <!-- Arrow -->
+  <path d="M 375 160 L 405 160" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow9)"/>
+
+  <!-- Detected Corners -->
+  <rect x="410" y="75" width="160" height="170" rx="10" fill="url(#detectGrad3)"/>
+  <text x="490" y="103" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Detected</text>
+  <text x="490" y="120" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Corners</text>
+  <line x1="425" y1="132" x2="555" y2="132" stroke="white" stroke-width="1" opacity="0.4"/>
+
+  <!-- Checkerboard with corners -->
+  <rect x="430" y="140" width="100" height="75" rx="4" fill="rgba(0,0,0,0.2)"/>
+  <g transform="translate(435, 145)">
+    <rect x="0" y="0" width="15" height="12" fill="white"/>
+    <rect x="15" y="0" width="15" height="12" fill="#555"/>
+    <rect x="30" y="0" width="15" height="12" fill="white"/>
+    <rect x="45" y="0" width="15" height="12" fill="#555"/>
+    <rect x="60" y="0" width="15" height="12" fill="white"/>
+    <rect x="75" y="0" width="15" height="12" fill="#555"/>
+    <rect x="0" y="12" width="15" height="12" fill="#555"/>
+    <rect x="15" y="12" width="15" height="12" fill="white"/>
+    <rect x="30" y="12" width="15" height="12" fill="#555"/>
+    <rect x="45" y="12" width="15" height="12" fill="white"/>
+    <rect x="60" y="12" width="15" height="12" fill="#555"/>
+    <rect x="75" y="12" width="15" height="12" fill="white"/>
+    <rect x="0" y="24" width="15" height="12" fill="white"/>
+    <rect x="15" y="24" width="15" height="12" fill="#555"/>
+    <rect x="30" y="24" width="15" height="12" fill="white"/>
+    <rect x="45" y="24" width="15" height="12" fill="#555"/>
+    <rect x="60" y="24" width="15" height="12" fill="white"/>
+    <rect x="75" y="24" width="15" height="12" fill="#555"/>
+    <rect x="0" y="36" width="15" height="12" fill="#555"/>
+    <rect x="15" y="36" width="15" height="12" fill="white"/>
+    <rect x="30" y="36" width="15" height="12" fill="#555"/>
+    <rect x="45" y="36" width="15" height="12" fill="white"/>
+    <rect x="60" y="36" width="15" height="12" fill="#555"/>
+    <rect x="75" y="36" width="15" height="12" fill="white"/>
+    <rect x="0" y="48" width="15" height="12" fill="white"/>
+    <rect x="15" y="48" width="15" height="12" fill="#555"/>
+    <rect x="30" y="48" width="15" height="12" fill="white"/>
+    <rect x="45" y="48" width="15" height="12" fill="#555"/>
+    <rect x="60" y="48" width="15" height="12" fill="white"/>
+    <rect x="75" y="48" width="15" height="12" fill="#555"/>
+    <!-- Corner markers -->
+    <circle cx="15" cy="12" r="3" fill="#27ae60"/>
+    <circle cx="30" cy="12" r="3" fill="#27ae60"/>
+    <circle cx="45" cy="12" r="3" fill="#27ae60"/>
+    <circle cx="60" cy="12" r="3" fill="#27ae60"/>
+    <circle cx="75" cy="12" r="3" fill="#27ae60"/>
+    <circle cx="15" cy="24" r="3" fill="#27ae60"/>
+    <circle cx="30" cy="24" r="3" fill="#27ae60"/>
+    <circle cx="45" cy="24" r="3" fill="#27ae60"/>
+    <circle cx="60" cy="24" r="3" fill="#27ae60"/>
+    <circle cx="75" cy="24" r="3" fill="#27ae60"/>
+    <circle cx="15" cy="36" r="3" fill="#27ae60"/>
+    <circle cx="30" cy="36" r="3" fill="#27ae60"/>
+    <circle cx="45" cy="36" r="3" fill="#27ae60"/>
+    <circle cx="60" cy="36" r="3" fill="#27ae60"/>
+    <circle cx="75" cy="36" r="3" fill="#27ae60"/>
+    <circle cx="15" cy="48" r="3" fill="#27ae60"/>
+    <circle cx="30" cy="48" r="3" fill="#27ae60"/>
+    <circle cx="45" cy="48" r="3" fill="#27ae60"/>
+    <circle cx="60" cy="48" r="3" fill="#27ae60"/>
+    <circle cx="75" cy="48" r="3" fill="#27ae60"/>
+  </g>
+
+  <text x="490" y="232" font-family="Arial, sans-serif" font-size="8" fill="#e8daef" text-anchor="middle">20 corners detected</text>
+
+  <!-- Arrow -->
+  <path d="M 575 160 L 605 160" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow9)"/>
+
+  <!-- Calibration -->
+  <rect x="610" y="85" width="130" height="150" rx="10" fill="url(#calibGrad3)"/>
+  <text x="675" y="113" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Calibration</text>
+  <line x1="625" y1="125" x2="725" y2="125" stroke="white" stroke-width="1" opacity="0.4"/>
+
+  <text x="675" y="150" font-family="Arial, sans-serif" font-size="9" fill="#d5f5e3" text-anchor="middle">Intrinsic K</text>
+  <text x="675" y="170" font-family="Arial, sans-serif" font-size="9" fill="#d5f5e3" text-anchor="middle">Distortion D</text>
+  <text x="675" y="190" font-family="Arial, sans-serif" font-size="9" fill="#d5f5e3" text-anchor="middle">Extrinsic [R|t]</text>
+
+  <rect x="630" y="200" width="90" height="25" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <text x="675" y="217" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle" font-weight="bold">Zhang's Method</text>
+
+  <!-- Results -->
+  <rect x="755" y="110" width="75" height="100" rx="8" fill="#2c3e50"/>
+  <text x="792" y="135" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">Result</text>
+  <line x1="765" y1="145" x2="820" y2="145" stroke="white" stroke-width="1" opacity="0.3"/>
+
+  <text x="792" y="168" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#27ae60" text-anchor="middle">0.52px</text>
+  <text x="792" y="183" font-family="Arial, sans-serif" font-size="7" fill="#bdc3c7" text-anchor="middle">RMS Error</text>
+  <text x="792" y="202" font-family="Arial, sans-serif" font-size="8" fill="#3498db" text-anchor="middle">Thermal</text>
+
+  <!-- Advantages Box -->
+  <rect x="100" y="270" width="650" height="80" rx="8" fill="rgba(231, 76, 60, 0.1)" stroke="#e74c3c" stroke-width="1"/>
+  <text x="425" y="293" font-family="Arial, sans-serif" font-size="11" fill="#c0392b" text-anchor="middle" font-weight="bold">Learning-Based Corner Detection Advantages</text>
+
+  <text x="210" y="318" font-family="Arial, sans-serif" font-size="9" fill="#e74c3c" text-anchor="middle">Noise Robust</text>
+  <text x="350" y="318" font-family="Arial, sans-serif" font-size="9" fill="#e74c3c" text-anchor="middle">Sub-pixel Accuracy</text>
+  <text x="500" y="318" font-family="Arial, sans-serif" font-size="9" fill="#e74c3c" text-anchor="middle">Thermal Compatible</text>
+  <text x="640" y="318" font-family="Arial, sans-serif" font-size="9" fill="#e74c3c" text-anchor="middle">Fast Processing</text>
+
+  <text x="210" y="335" font-family="Arial, sans-serif" font-size="8" fill="#7f8c8d" text-anchor="middle">Low contrast images</text>
+  <text x="350" y="335" font-family="Arial, sans-serif" font-size="8" fill="#7f8c8d" text-anchor="middle">0.1px precision</text>
+  <text x="500" y="335" font-family="Arial, sans-serif" font-size="8" fill="#7f8c8d" text-anchor="middle">Heat-box patterns</text>
+  <text x="640" y="335" font-family="Arial, sans-serif" font-size="8" fill="#7f8c8d" text-anchor="middle">Real-time capable</text>
+
+  <!-- Bottom Info -->
+  <text x="425" y="378" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d" text-anchor="middle">IEIE (Institute of Electronics and Information Engineers) Summer Conference 2018 | Kim &amp; Lee</text>
+</svg>

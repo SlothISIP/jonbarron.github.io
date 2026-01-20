@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400">
+  <defs>
+    <linearGradient id="cnnGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="lstmGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c0392b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="dtwGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#27ae60;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e8449;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="outputGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#9b59b6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8e44ad;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="400" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="450" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50" text-anchor="middle">CNN-LSTM Hybrid Architecture with DTW-SMOTE Data Augmentation</text>
+
+  <!-- UWB Radar Input -->
+  <rect x="20" y="140" width="100" height="120" rx="10" fill="#34495e"/>
+  <text x="70" y="175" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">UWB Radar</text>
+  <text x="70" y="195" font-family="Arial, sans-serif" font-size="10" fill="#bdc3c7" text-anchor="middle">Novelda X4</text>
+  <text x="70" y="215" font-family="Arial, sans-serif" font-size="10" fill="#bdc3c7" text-anchor="middle">8.2 GHz</text>
+  <text x="70" y="235" font-family="Arial, sans-serif" font-size="10" fill="#bdc3c7" text-anchor="middle">700 samples</text>
+
+  <!-- Arrow -->
+  <path d="M 125 200 L 155 200" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- DTW-SMOTE Block -->
+  <rect x="160" y="120" width="120" height="160" rx="10" fill="url(#dtwGrad)"/>
+  <text x="220" y="155" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">DTW-SMOTE</text>
+  <text x="220" y="175" font-family="Arial, sans-serif" font-size="10" fill="#e8f6f3" text-anchor="middle">Data Augmentation</text>
+  <line x1="175" y1="190" x2="265" y2="190" stroke="white" stroke-width="1" opacity="0.5"/>
+  <text x="220" y="210" font-family="Arial, sans-serif" font-size="9" fill="#e8f6f3" text-anchor="middle">Dynamic Time</text>
+  <text x="220" y="225" font-family="Arial, sans-serif" font-size="9" fill="#e8f6f3" text-anchor="middle">Warping Distance</text>
+  <text x="220" y="250" font-family="Arial, sans-serif" font-size="9" fill="#e8f6f3" text-anchor="middle">Class Balancing</text>
+  <text x="220" y="265" font-family="Arial, sans-serif" font-size="9" fill="#e8f6f3" text-anchor="middle">for Time-Series</text>
+
+  <!-- Arrow -->
+  <path d="M 285 200 L 315 200" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- CNN Block -->
+  <rect x="320" y="100" width="140" height="200" rx="10" fill="url(#cnnGrad)"/>
+  <text x="390" y="130" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">CNN Encoder</text>
+  <line x1="335" y1="145" x2="445" y2="145" stroke="white" stroke-width="1" opacity="0.5"/>
+
+  <!-- Conv layers -->
+  <rect x="335" y="155" width="110" height="25" rx="5" fill="rgba(255,255,255,0.2)"/>
+  <text x="390" y="172" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">Conv1D + ReLU + Pool</text>
+
+  <rect x="335" y="190" width="110" height="25" rx="5" fill="rgba(255,255,255,0.2)"/>
+  <text x="390" y="207" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">Conv1D + ReLU + Pool</text>
+
+  <rect x="335" y="225" width="110" height="25" rx="5" fill="rgba(255,255,255,0.2)"/>
+  <text x="390" y="242" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">Conv1D + ReLU + Pool</text>
+
+  <rect x="335" y="260" width="110" height="25" rx="5" fill="rgba(255,255,255,0.2)"/>
+  <text x="390" y="277" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">Feature Extraction</text>
+
+  <!-- Arrow -->
+  <path d="M 465 200 L 495 200" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- LSTM Block -->
+  <rect x="500" y="100" width="140" height="200" rx="10" fill="url(#lstmGrad)"/>
+  <text x="570" y="130" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">LSTM Decoder</text>
+  <line x1="515" y1="145" x2="625" y2="145" stroke="white" stroke-width="1" opacity="0.5"/>
+
+  <!-- LSTM layers -->
+  <rect x="515" y="155" width="110" height="25" rx="5" fill="rgba(255,255,255,0.2)"/>
+  <text x="570" y="172" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">LSTM Layer 1</text>
+
+  <rect x="515" y="190" width="110" height="25" rx="5" fill="rgba(255,255,255,0.2)"/>
+  <text x="570" y="207" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">LSTM Layer 2</text>
+
+  <rect x="515" y="225" width="110" height="25" rx="5" fill="rgba(255,255,255,0.2)"/>
+  <text x="570" y="242" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">Dropout (0.3)</text>
+
+  <rect x="515" y="260" width="110" height="25" rx="5" fill="rgba(255,255,255,0.2)"/>
+  <text x="570" y="277" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">Temporal Modeling</text>
+
+  <!-- Arrow -->
+  <path d="M 645 200 L 675 200" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Output Block -->
+  <rect x="680" y="120" width="120" height="160" rx="10" fill="url(#outputGrad)"/>
+  <text x="740" y="155" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">Classification</text>
+  <line x1="695" y1="170" x2="785" y2="170" stroke="white" stroke-width="1" opacity="0.5"/>
+  <text x="740" y="190" font-family="Arial, sans-serif" font-size="10" fill="#f5eef8" text-anchor="middle">Dense + Softmax</text>
+  <text x="740" y="220" font-family="Arial, sans-serif" font-size="9" fill="#f5eef8" text-anchor="middle">Normal</text>
+  <text x="740" y="235" font-family="Arial, sans-serif" font-size="9" fill="#f5eef8" text-anchor="middle">Apnea</text>
+  <text x="740" y="250" font-family="Arial, sans-serif" font-size="9" fill="#f5eef8" text-anchor="middle">Tachypnea</text>
+  <text x="740" y="265" font-family="Arial, sans-serif" font-size="9" fill="#f5eef8" text-anchor="middle">Bradypnea</text>
+
+  <!-- Arrow -->
+  <path d="M 805 200 L 835 200" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Results Box -->
+  <rect x="840" y="140" width="50" height="120" rx="8" fill="#2c3e50"/>
+  <text x="865" y="175" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#27ae60" text-anchor="middle">94.3%</text>
+  <text x="865" y="192" font-family="Arial, sans-serif" font-size="8" fill="#bdc3c7" text-anchor="middle">Accuracy</text>
+  <text x="865" y="215" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#3498db" text-anchor="middle">0.969</text>
+  <text x="865" y="232" font-family="Arial, sans-serif" font-size="8" fill="#bdc3c7" text-anchor="middle">AUC</text>
+  <text x="865" y="252" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#e74c3c" text-anchor="middle">45.3ms</text>
+
+  <!-- Bottom Info -->
+  <text x="450" y="350" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d" text-anchor="middle">Electronics (MDPI) 2025 | Kim &amp; Lee | Keimyung University</text>
+
+  <!-- Signal wave decoration -->
+  <path d="M 30 330 Q 50 310, 70 330 T 110 330 T 150 330 T 190 330" stroke="#3498db" stroke-width="2" fill="none" opacity="0.3"/>
+  <path d="M 710 330 Q 730 310, 750 330 T 790 330 T 830 330 T 870 330" stroke="#e74c3c" stroke-width="2" fill="none" opacity="0.3"/>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#7f8c8d"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="stereoGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#9b59b6;stop-opacity:0.2"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50">Block-Based Stereo Matching with Occlusion Handling</text>
+
+  <!-- Left Camera Image -->
+  <g transform="translate(50, 60)">
+    <rect x="0" y="0" width="150" height="120" fill="#fff" stroke="#3498db" stroke-width="2" rx="4"/>
+    <text x="75" y="-10" text-anchor="middle" font-family="Arial" font-size="12" fill="#555">Left Image</text>
+    <!-- Blocks -->
+    <rect x="10" y="10" width="30" height="30" fill="#e8f4fc" stroke="#3498db" stroke-width="1"/>
+    <rect x="45" y="10" width="30" height="30" fill="#3498db" stroke="#2980b9" stroke-width="1"/>
+    <rect x="80" y="10" width="30" height="30" fill="#e8f4fc" stroke="#3498db" stroke-width="1"/>
+    <rect x="115" y="10" width="25" height="30" fill="#e8f4fc" stroke="#3498db" stroke-width="1"/>
+
+    <rect x="10" y="45" width="30" height="30" fill="#e8f4fc" stroke="#3498db" stroke-width="1"/>
+    <rect x="45" y="45" width="30" height="30" fill="#e8f4fc" stroke="#3498db" stroke-width="1"/>
+    <rect x="80" y="45" width="30" height="30" fill="#f1c40f" stroke="#f39c12" stroke-width="2" opacity="0.7"/>
+    <rect x="115" y="45" width="25" height="30" fill="#e8f4fc" stroke="#3498db" stroke-width="1"/>
+
+    <rect x="10" y="80" width="30" height="30" fill="#e8f4fc" stroke="#3498db" stroke-width="1"/>
+    <rect x="45" y="80" width="30" height="30" fill="#e8f4fc" stroke="#3498db" stroke-width="1"/>
+    <rect x="80" y="80" width="30" height="30" fill="#e8f4fc" stroke="#3498db" stroke-width="1"/>
+    <rect x="115" y="80" width="25" height="30" fill="#e74c3c" stroke="#c0392b" stroke-width="1" opacity="0.5"/>
+    <text x="127" y="100" text-anchor="middle" font-family="Arial" font-size="8" fill="#fff">OCC</text>
+  </g>
+
+  <!-- Right Camera Image -->
+  <g transform="translate(250, 60)">
+    <rect x="0" y="0" width="150" height="120" fill="#fff" stroke="#9b59b6" stroke-width="2" rx="4"/>
+    <text x="75" y="-10" text-anchor="middle" font-family="Arial" font-size="12" fill="#555">Right Image</text>
+    <!-- Blocks (shifted) -->
+    <rect x="25" y="10" width="30" height="30" fill="#f5eef8" stroke="#9b59b6" stroke-width="1"/>
+    <rect x="60" y="10" width="30" height="30" fill="#9b59b6" stroke="#8e44ad" stroke-width="1"/>
+    <rect x="95" y="10" width="30" height="30" fill="#f5eef8" stroke="#9b59b6" stroke-width="1"/>
+
+    <rect x="10" y="45" width="30" height="30" fill="#f5eef8" stroke="#9b59b6" stroke-width="1"/>
+    <rect x="45" y="45" width="30" height="30" fill="#f5eef8" stroke="#9b59b6" stroke-width="1"/>
+    <rect x="95" y="45" width="30" height="30" fill="#f1c40f" stroke="#f39c12" stroke-width="2" opacity="0.7"/>
+
+    <rect x="10" y="80" width="30" height="30" fill="#f5eef8" stroke="#9b59b6" stroke-width="1"/>
+    <rect x="45" y="80" width="30" height="30" fill="#f5eef8" stroke="#9b59b6" stroke-width="1"/>
+    <rect x="80" y="80" width="30" height="30" fill="#f5eef8" stroke="#9b59b6" stroke-width="1"/>
+    <rect x="115" y="80" width="25" height="30" fill="#f5eef8" stroke="#9b59b6" stroke-width="1"/>
+  </g>
+
+  <!-- Matching Arrow -->
+  <line x1="145" y1="130" x2="305" y2="130" stroke="#f39c12" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+  <text x="225" y="125" text-anchor="middle" font-family="Arial" font-size="10" fill="#f39c12">Block Matching</text>
+
+  <!-- Process Flow Arrow -->
+  <line x1="420" y1="130" x2="470" y2="130" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Image Segmentation -->
+  <g transform="translate(480, 60)">
+    <rect x="0" y="0" width="130" height="120" fill="#fff" stroke="#27ae60" stroke-width="2" rx="4"/>
+    <text x="65" y="-10" text-anchor="middle" font-family="Arial" font-size="12" fill="#555">Segmentation</text>
+    <!-- Segmented regions -->
+    <path d="M10,10 L60,10 L60,50 L10,50 Z" fill="#2ecc71" opacity="0.4" stroke="#27ae60"/>
+    <path d="M65,10 L120,10 L120,55 L80,55 L80,35 L65,35 Z" fill="#3498db" opacity="0.4" stroke="#2980b9"/>
+    <path d="M10,55 L50,55 L50,110 L10,110 Z" fill="#e74c3c" opacity="0.4" stroke="#c0392b"/>
+    <path d="M55,60 L120,60 L120,110 L55,110 Z" fill="#f39c12" opacity="0.4" stroke="#e67e22"/>
+    <text x="65" y="140" text-anchor="middle" font-family="Arial" font-size="9" fill="#555">Region-based Processing</text>
+  </g>
+
+  <!-- Process Flow Arrow to Disparity -->
+  <line x1="620" y1="130" x2="650" y2="130" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Disparity Map -->
+  <g transform="translate(660, 60)">
+    <rect x="0" y="0" width="120" height="120" fill="#fff" stroke="#e74c3c" stroke-width="2" rx="4"/>
+    <text x="60" y="-10" text-anchor="middle" font-family="Arial" font-size="12" fill="#555">Disparity Map</text>
+    <!-- Depth gradient -->
+    <defs>
+      <linearGradient id="depthGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:#000"/>
+        <stop offset="50%" style="stop-color:#666"/>
+        <stop offset="100%" style="stop-color:#fff"/>
+      </linearGradient>
+    </defs>
+    <rect x="10" y="10" width="100" height="100" fill="url(#depthGrad)" rx="2"/>
+    <!-- Depth indicators -->
+    <circle cx="35" cy="40" r="15" fill="none" stroke="#fff" stroke-width="2"/>
+    <circle cx="75" cy="70" r="20" fill="none" stroke="#333" stroke-width="2"/>
+  </g>
+
+  <!-- Lower Section: Pipeline -->
+  <g transform="translate(50, 220)">
+    <!-- Pipeline boxes -->
+    <rect x="0" y="0" width="140" height="50" fill="#3498db" rx="5" opacity="0.9"/>
+    <text x="70" y="22" text-anchor="middle" font-family="Arial" font-size="11" fill="#fff" font-weight="bold">Stereo Image</text>
+    <text x="70" y="38" text-anchor="middle" font-family="Arial" font-size="10" fill="#fff">Acquisition</text>
+
+    <line x1="145" y1="25" x2="175" y2="25" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="180" y="0" width="140" height="50" fill="#9b59b6" rx="5" opacity="0.9"/>
+    <text x="250" y="22" text-anchor="middle" font-family="Arial" font-size="11" fill="#fff" font-weight="bold">Block-Based</text>
+    <text x="250" y="38" text-anchor="middle" font-family="Arial" font-size="10" fill="#fff">Cost Computation</text>
+
+    <line x1="325" y1="25" x2="355" y2="25" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="360" y="0" width="140" height="50" fill="#e74c3c" rx="5" opacity="0.9"/>
+    <text x="430" y="22" text-anchor="middle" font-family="Arial" font-size="11" fill="#fff" font-weight="bold">Occlusion</text>
+    <text x="430" y="38" text-anchor="middle" font-family="Arial" font-size="10" fill="#fff">Detection</text>
+
+    <line x1="505" y1="25" x2="535" y2="25" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="540" y="0" width="140" height="50" fill="#27ae60" rx="5" opacity="0.9"/>
+    <text x="610" y="22" text-anchor="middle" font-family="Arial" font-size="11" fill="#fff" font-weight="bold">Disparity</text>
+    <text x="610" y="38" text-anchor="middle" font-family="Arial" font-size="10" fill="#fff">Refinement</text>
+  </g>
+
+  <!-- Key Features -->
+  <g transform="translate(50, 310)">
+    <text x="0" y="0" font-family="Arial" font-size="12" font-weight="bold" fill="#2c3e50">Key Features:</text>
+
+    <circle cx="20" cy="25" r="6" fill="#3498db"/>
+    <text x="35" y="29" font-family="Arial" font-size="11" fill="#555">Block-based matching for efficient computation</text>
+
+    <circle cx="300" cy="25" r="6" fill="#e74c3c"/>
+    <text x="315" y="29" font-family="Arial" font-size="11" fill="#555">Occlusion handling via segmentation</text>
+
+    <circle cx="550" cy="25" r="6" fill="#27ae60"/>
+    <text x="565" y="29" font-family="Arial" font-size="11" fill="#555">Depth estimation accuracy</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(50, 360)">
+    <rect x="0" y="0" width="15" height="15" fill="#f1c40f" opacity="0.7" stroke="#f39c12"/>
+    <text x="20" y="12" font-family="Arial" font-size="10" fill="#555">Matched Block</text>
+
+    <rect x="130" y="0" width="15" height="15" fill="#e74c3c" opacity="0.5" stroke="#c0392b"/>
+    <text x="150" y="12" font-family="Arial" font-size="10" fill="#555">Occluded Region</text>
+
+    <rect x="280" y="0" width="15" height="15" fill="url(#depthGrad)" stroke="#555"/>
+    <text x="300" y="12" font-family="Arial" font-size="10" fill="#555">Depth (Near → Far)</text>
+  </g>
+</svg>

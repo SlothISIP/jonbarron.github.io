@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#555"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="400" fill="#f8f9fa"/>
+
+  <text x="400" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50">Respiratory Status Classification via Signal Correlation</text>
+
+  <!-- Reference Signal -->
+  <g transform="translate(40, 60)">
+    <rect x="0" y="0" width="150" height="120" fill="#27ae60" stroke="#1e8449" stroke-width="2" rx="6" opacity="0.9"/>
+    <text x="75" y="25" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#fff">Reference Signal</text>
+
+    <!-- Normal waveform -->
+    <rect x="15" y="40" width="120" height="55" fill="rgba(255,255,255,0.2)" rx="3"/>
+    <path d="M25,70 Q40,50 55,70 Q70,90 85,70 Q100,50 115,70 Q130,90 135,70" fill="none" stroke="#fff" stroke-width="2"/>
+
+    <text x="75" y="110" text-anchor="middle" font-family="Arial" font-size="9" fill="#d5f5e3">Normal Breathing</text>
+  </g>
+
+  <line x1="200" y1="120" x2="240" y2="120" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Test Signal -->
+  <g transform="translate(250, 60)">
+    <rect x="0" y="0" width="150" height="120" fill="#e67e22" stroke="#d35400" stroke-width="2" rx="6" opacity="0.9"/>
+    <text x="75" y="25" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#fff">Test Signal</text>
+
+    <!-- Abnormal waveform with apnea -->
+    <rect x="15" y="40" width="120" height="55" fill="rgba(255,255,255,0.2)" rx="3"/>
+    <path d="M25,70 Q40,50 55,70 Q70,90 85,70 L100,70 L115,70 Q125,55 135,70" fill="none" stroke="#fff" stroke-width="2"/>
+
+    <!-- Apnea indicator -->
+    <rect x="82" y="58" width="35" height="25" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="3,2"/>
+    <text x="100" y="53" text-anchor="middle" font-family="Arial" font-size="8" fill="#c0392b">Apnea</text>
+
+    <text x="75" y="110" text-anchor="middle" font-family="Arial" font-size="9" fill="#fdebd0">With Abnormality</text>
+  </g>
+
+  <line x1="410" y1="120" x2="450" y2="120" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Cross-Correlation -->
+  <g transform="translate(460, 55)">
+    <rect x="0" y="0" width="150" height="130" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="6" opacity="0.9"/>
+    <text x="75" y="25" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#fff">Cross-Correlation</text>
+
+    <!-- Formula -->
+    <rect x="15" y="40" width="120" height="35" fill="rgba(255,255,255,0.2)" rx="3"/>
+    <text x="75" y="55" text-anchor="middle" font-family="Arial" font-size="9" fill="#fff">R = S1(t) * S2(t)</text>
+    <text x="75" y="68" text-anchor="middle" font-family="Arial" font-size="8" fill="#d6eaf8">Time correlation</text>
+
+    <!-- Correlation value -->
+    <rect x="25" y="85" width="100" height="30" fill="rgba(255,255,255,0.15)" rx="3"/>
+    <text x="75" y="105" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#f1c40f">r = 0.72</text>
+  </g>
+
+  <line x1="620" y1="120" x2="660" y2="120" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Classification -->
+  <g transform="translate(670, 55)">
+    <rect x="0" y="0" width="110" height="130" fill="#9b59b6" stroke="#8e44ad" stroke-width="2" rx="6" opacity="0.9"/>
+    <text x="55" y="25" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#fff">Classification</text>
+
+    <rect x="10" y="40" width="90" height="22" fill="#27ae60" rx="3"/>
+    <text x="55" y="55" text-anchor="middle" font-family="Arial" font-size="8" fill="#fff">Normal: r &gt; 0.85</text>
+
+    <rect x="10" y="68" width="90" height="22" fill="#f39c12" rx="3"/>
+    <text x="55" y="83" text-anchor="middle" font-family="Arial" font-size="8" fill="#fff">Abnormal: 0.5-0.85</text>
+
+    <rect x="10" y="96" width="90" height="22" fill="#e74c3c" rx="3"/>
+    <text x="55" y="111" text-anchor="middle" font-family="Arial" font-size="8" fill="#fff">Apnea: r &lt; 0.5</text>
+  </g>
+
+  <!-- Pipeline -->
+  <g transform="translate(50, 220)">
+    <rect x="0" y="0" width="700" height="50" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1" rx="5"/>
+    <text x="350" y="18" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#2c3e50">Signal Correlation Pipeline</text>
+
+    <rect x="20" y="28" width="110" height="18" fill="#27ae60" rx="3"/>
+    <text x="75" y="40" text-anchor="middle" font-family="Arial" font-size="8" fill="#fff">BIOPAC Sensor</text>
+
+    <rect x="150" y="28" width="110" height="18" fill="#e67e22" rx="3"/>
+    <text x="205" y="40" text-anchor="middle" font-family="Arial" font-size="8" fill="#fff">Median Filter</text>
+
+    <rect x="280" y="28" width="110" height="18" fill="#3498db" rx="3"/>
+    <text x="335" y="40" text-anchor="middle" font-family="Arial" font-size="8" fill="#fff">Correlation Calc</text>
+
+    <rect x="410" y="28" width="110" height="18" fill="#9b59b6" rx="3"/>
+    <text x="465" y="40" text-anchor="middle" font-family="Arial" font-size="8" fill="#fff">Threshold</text>
+
+    <rect x="540" y="28" width="110" height="18" fill="#e74c3c" rx="3"/>
+    <text x="595" y="40" text-anchor="middle" font-family="Arial" font-size="8" fill="#fff">Classification</text>
+  </g>
+
+  <!-- Key Points -->
+  <g transform="translate(50, 300)">
+    <rect x="0" y="0" width="700" height="70" fill="#fff" stroke="#bdc3c7" stroke-width="1" rx="5"/>
+    <text x="350" y="18" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#2c3e50">Key Features</text>
+
+    <circle cx="30" cy="45" r="6" fill="#27ae60"/>
+    <text x="45" y="49" font-family="Arial" font-size="9" fill="#555">BIOPAC airflow transducer for signal acquisition</text>
+
+    <circle cx="280" cy="45" r="6" fill="#3498db"/>
+    <text x="295" y="49" font-family="Arial" font-size="9" fill="#555">Median filter preserves signal boundaries</text>
+
+    <circle cx="530" cy="45" r="6" fill="#9b59b6"/>
+    <text x="545" y="49" font-family="Arial" font-size="9" fill="#555">Clear normal/apnea separation</text>
+  </g>
+</svg>

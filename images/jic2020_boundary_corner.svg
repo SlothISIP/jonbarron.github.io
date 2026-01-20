@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#555"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="400" fill="#f8f9fa"/>
+
+  <text x="400" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50">Boundary and Corner Detection for Multiple Thermal Camera Calibration</text>
+
+  <!-- Thermal Checkerboard Image -->
+  <g transform="translate(30, 60)">
+    <rect x="0" y="0" width="130" height="110" fill="#1a1a2e" stroke="#e74c3c" stroke-width="2" rx="4"/>
+    <text x="65" y="-10" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">Thermal Image</text>
+    <!-- Checkerboard with heat pattern -->
+    <rect x="10" y="10" width="25" height="22" fill="#ff6b6b"/>
+    <rect x="35" y="10" width="25" height="22" fill="#2d3436"/>
+    <rect x="60" y="10" width="25" height="22" fill="#ff6b6b"/>
+    <rect x="85" y="10" width="25" height="22" fill="#2d3436"/>
+    <rect x="10" y="32" width="25" height="22" fill="#2d3436"/>
+    <rect x="35" y="32" width="25" height="22" fill="#ff6b6b"/>
+    <rect x="60" y="32" width="25" height="22" fill="#2d3436"/>
+    <rect x="85" y="32" width="25" height="22" fill="#ff6b6b"/>
+    <rect x="10" y="54" width="25" height="22" fill="#ff6b6b"/>
+    <rect x="35" y="54" width="25" height="22" fill="#2d3436"/>
+    <rect x="60" y="54" width="25" height="22" fill="#ff6b6b"/>
+    <rect x="85" y="54" width="25" height="22" fill="#2d3436"/>
+    <rect x="10" y="76" width="25" height="22" fill="#2d3436"/>
+    <rect x="35" y="76" width="25" height="22" fill="#ff6b6b"/>
+    <rect x="60" y="76" width="25" height="22" fill="#2d3436"/>
+    <rect x="85" y="76" width="25" height="22" fill="#ff6b6b"/>
+  </g>
+
+  <line x1="170" y1="115" x2="200" y2="115" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 5 Corner Detection Algorithms -->
+  <g transform="translate(210, 50)">
+    <rect x="0" y="0" width="200" height="130" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="4" opacity="0.15"/>
+    <text x="100" y="-10" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#2980b9">5 Detection Algorithms</text>
+
+    <!-- Algorithm boxes -->
+    <rect x="10" y="15" width="85" height="22" fill="#3498db" rx="3"/>
+    <text x="52" y="30" text-anchor="middle" font-family="Arial" font-size="8" fill="#fff">Harris Corner</text>
+
+    <rect x="105" y="15" width="85" height="22" fill="#3498db" rx="3"/>
+    <text x="147" y="30" text-anchor="middle" font-family="Arial" font-size="8" fill="#fff">FAST Corner</text>
+
+    <rect x="10" y="45" width="85" height="22" fill="#3498db" rx="3"/>
+    <text x="52" y="60" text-anchor="middle" font-family="Arial" font-size="8" fill="#fff">Shi-Tomasi</text>
+
+    <rect x="105" y="45" width="85" height="22" fill="#27ae60" rx="3"/>
+    <text x="147" y="60" text-anchor="middle" font-family="Arial" font-size="8" fill="#fff">Förstner</text>
+
+    <rect x="57" y="75" width="85" height="22" fill="#27ae60" rx="3"/>
+    <text x="100" y="90" text-anchor="middle" font-family="Arial" font-size="8" fill="#fff">SUSAN</text>
+
+    <text x="100" y="115" text-anchor="middle" font-family="Arial" font-size="9" fill="#27ae60">Best: FAST + Förstner</text>
+  </g>
+
+  <line x1="420" y1="115" x2="450" y2="115" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Detected Corners -->
+  <g transform="translate(460, 60)">
+    <rect x="0" y="0" width="130" height="110" fill="#fff" stroke="#27ae60" stroke-width="2" rx="4"/>
+    <text x="65" y="-10" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">Detected Corners</text>
+    <!-- Grid with corner markers -->
+    <line x1="35" y1="10" x2="35" y2="98" stroke="#ddd" stroke-width="1"/>
+    <line x1="60" y1="10" x2="60" y2="98" stroke="#ddd" stroke-width="1"/>
+    <line x1="85" y1="10" x2="85" y2="98" stroke="#ddd" stroke-width="1"/>
+    <line x1="10" y1="32" x2="120" y2="32" stroke="#ddd" stroke-width="1"/>
+    <line x1="10" y1="54" x2="120" y2="54" stroke="#ddd" stroke-width="1"/>
+    <line x1="10" y1="76" x2="120" y2="76" stroke="#ddd" stroke-width="1"/>
+    <!-- Corner points -->
+    <circle cx="35" cy="32" r="4" fill="#e74c3c"/>
+    <circle cx="60" cy="32" r="4" fill="#e74c3c"/>
+    <circle cx="85" cy="32" r="4" fill="#e74c3c"/>
+    <circle cx="35" cy="54" r="4" fill="#e74c3c"/>
+    <circle cx="60" cy="54" r="4" fill="#e74c3c"/>
+    <circle cx="85" cy="54" r="4" fill="#e74c3c"/>
+    <circle cx="35" cy="76" r="4" fill="#e74c3c"/>
+    <circle cx="60" cy="76" r="4" fill="#e74c3c"/>
+    <circle cx="85" cy="76" r="4" fill="#e74c3c"/>
+  </g>
+
+  <line x1="600" y1="115" x2="630" y2="115" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Calibration Output -->
+  <g transform="translate(640, 60)">
+    <rect x="0" y="0" width="130" height="110" fill="#9b59b6" stroke="#8e44ad" stroke-width="2" rx="4" opacity="0.2"/>
+    <text x="65" y="-10" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">Calibration</text>
+
+    <text x="65" y="25" text-anchor="middle" font-family="Arial" font-size="9" fill="#333">Detection Rate</text>
+    <text x="65" y="45" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#27ae60">100%</text>
+
+    <text x="65" y="70" text-anchor="middle" font-family="Arial" font-size="9" fill="#333">Error Rate</text>
+    <text x="65" y="90" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#e74c3c">2.1%</text>
+  </g>
+
+  <!-- Algorithm Comparison Table -->
+  <g transform="translate(50, 200)">
+    <rect x="0" y="0" width="700" height="100" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1" rx="5"/>
+    <text x="350" y="20" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#2c3e50">Algorithm Performance Comparison</text>
+
+    <!-- Headers -->
+    <text x="50" y="45" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="#555">Algorithm</text>
+    <text x="180" y="45" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="#555">Detection</text>
+    <text x="280" y="45" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="#555">Error</text>
+    <text x="380" y="45" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="#555">Speed</text>
+    <text x="500" y="45" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="#555">Thermal Suitable</text>
+
+    <!-- FAST (Best) -->
+    <rect x="10" y="55" width="80" height="18" fill="#27ae60" rx="2"/>
+    <text x="50" y="68" text-anchor="middle" font-family="Arial" font-size="8" fill="#fff">FAST</text>
+    <text x="180" y="68" text-anchor="middle" font-family="Arial" font-size="9" fill="#27ae60">100%</text>
+    <text x="280" y="68" text-anchor="middle" font-family="Arial" font-size="9" fill="#27ae60">2.1%</text>
+    <text x="380" y="68" text-anchor="middle" font-family="Arial" font-size="9" fill="#27ae60">Fast</text>
+    <text x="500" y="68" text-anchor="middle" font-family="Arial" font-size="9" fill="#27ae60">Excellent</text>
+
+    <!-- Förstner -->
+    <rect x="10" y="78" width="80" height="18" fill="#27ae60" rx="2"/>
+    <text x="50" y="91" text-anchor="middle" font-family="Arial" font-size="8" fill="#fff">Förstner</text>
+    <text x="180" y="91" text-anchor="middle" font-family="Arial" font-size="9" fill="#27ae60">98%</text>
+    <text x="280" y="91" text-anchor="middle" font-family="Arial" font-size="9" fill="#27ae60">3.2%</text>
+    <text x="380" y="91" text-anchor="middle" font-family="Arial" font-size="9" fill="#f39c12">Medium</text>
+    <text x="500" y="91" text-anchor="middle" font-family="Arial" font-size="9" fill="#27ae60">Excellent</text>
+
+    <!-- Others indicator -->
+    <text x="620" y="75" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">+3 more</text>
+    <text x="620" y="90" text-anchor="middle" font-family="Arial" font-size="9" fill="#555">algorithms</text>
+  </g>
+
+  <!-- Key Points -->
+  <g transform="translate(50, 330)">
+    <circle cx="10" cy="10" r="6" fill="#e74c3c"/>
+    <text x="25" y="14" font-family="Arial" font-size="10" fill="#555">Heat-emitting checkerboard target for thermal visibility</text>
+
+    <circle cx="310" cy="10" r="6" fill="#27ae60"/>
+    <text x="325" y="14" font-family="Arial" font-size="10" fill="#555">FAST Corner: Best for thermal (100% detection, 2.1% error)</text>
+
+    <circle cx="10" cy="35" r="6" fill="#3498db"/>
+    <text x="25" y="39" font-family="Arial" font-size="10" fill="#555">5 algorithms evaluated for thermal image characteristics</text>
+
+    <circle cx="310" cy="35" r="6" fill="#9b59b6"/>
+    <text x="325" y="39" font-family="Arial" font-size="10" fill="#555">Multi-camera calibration with sub-pixel accuracy</text>
+  </g>
+</svg>

@@ -7,7 +7,7 @@
 
     <title>APEX-ML - AutoML Platform | Ju O Kim</title>
 
-    <meta name="description" content="Enterprise GPU-Optimized AutoML Platform with 81 algorithms, 3-phase pipeline, achieving 99.7% accuracy on fraud detection.">
+    <meta name="description" content="Enterprise GPU-Optimized AutoML Platform with 6 algorithm families (81 configurations), 3-phase pipeline for imbalanced classification.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Ju O Kim">
     <link rel="canonical" href="https://slothisip.github.io/projects/apex-ml/">
@@ -16,7 +16,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://slothisip.github.io/projects/apex-ml/">
     <meta property="og:title" content="APEX-ML - Enterprise AutoML Platform">
-    <meta property="og:description" content="GPU-accelerated AutoML with 81 algorithms, 3-phase pipeline, 99.7% fraud detection accuracy.">
+    <meta property="og:description" content="GPU-accelerated AutoML with 6 algorithm families, 3-phase pipeline for manufacturing and fraud detection.">
     <meta property="og:image" content="https://slothisip.github.io/images/apex_ml_thumb.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -26,7 +26,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://slothisip.github.io/projects/apex-ml/">
     <meta name="twitter:title" content="APEX-ML - Enterprise AutoML Platform">
-    <meta name="twitter:description" content="GPU-accelerated AutoML with 81 algorithms, 3-phase pipeline, 99.7% fraud detection accuracy.">
+    <meta name="twitter:description" content="GPU-accelerated AutoML with 6 algorithm families, 3-phase pipeline for manufacturing and fraud detection.">
     <meta name="twitter:image" content="https://slothisip.github.io/images/apex_ml_thumb.png">
     <meta name="twitter:image:alt" content="APEX-ML AutoML platform architecture diagram">
 
@@ -47,7 +47,7 @@
             <h2 class="col-md-12 text-center">
                 APEX-ML: Enterprise AutoML Platform
                 <small>
-                    81 Algorithms | 3-Phase Pipeline | GPU-Accelerated
+                    6 Algorithm Families | 3-Phase Pipeline | GPU-Accelerated
                 </small>
             </h2>
         </div>
@@ -70,7 +70,7 @@
                     Overview
                 </h3>
                 <p class="text-justify">
-                    APEX-ML is an enterprise-grade AutoML platform featuring 81 algorithms with a sophisticated 3-phase pipeline: Rapid Screening, Bayesian Optimization, and Ensemble Construction. The system achieves 99.7% accuracy on fraud detection benchmarks with 60-80% GPU utilization through distributed computing via Ray clusters.
+                    APEX-ML is an enterprise-grade AutoML platform featuring 6 algorithm families across a sophisticated 3-phase pipeline: Rapid Screening, Bayesian Optimization, and Ensemble Construction. Reduces model development time by 80%+ (weeks to days) with 60-80% GPU utilization through distributed computing via Ray clusters, enabling non-ML engineers to build production-ready models.
                 </p>
             </div>
         </div>
@@ -145,53 +145,44 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    APEX-ML vs. Competing AutoML
+                    Key Differentiators
                 </h3>
                 <p class="text-justify">
-                    Unlike general-purpose AutoML platforms, <strong>APEX-ML is purpose-built for enterprise fraud detection</strong> with GPU-native architecture:
+                    APEX-ML is designed specifically for <strong>manufacturing and fraud detection</strong> use cases with GPU-native architecture:
                 </p>
                 <table class="table table-bordered" style="font-size: 0.9em;">
                     <thead>
                         <tr style="background-color: #e8f4f8;">
                             <th>Feature</th>
                             <th style="text-align: center;">APEX-ML</th>
-                            <th style="text-align: center;">Auto-sklearn</th>
-                            <th style="text-align: center;">AutoGluon</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>Algorithm Count</td>
-                            <td style="text-align: center; background-color: #d4edda;"><strong>81</strong></td>
-                            <td style="text-align: center;">~30</td>
-                            <td style="text-align: center;">~40</td>
+                            <td style="text-align: center;"><strong>81</strong> curated algorithms</td>
                         </tr>
                         <tr>
-                            <td>GPU-Native</td>
-                            <td style="text-align: center; background-color: #d4edda;"><strong>Full CUDA</strong></td>
-                            <td style="text-align: center;">Limited</td>
-                            <td style="text-align: center;">Partial</td>
+                            <td>GPU Acceleration</td>
+                            <td style="text-align: center;"><strong>Full CUDA</strong> pipeline</td>
                         </tr>
                         <tr>
                             <td>Parallel Screening</td>
-                            <td style="text-align: center; background-color: #d4edda;"><strong>All 81</strong></td>
-                            <td style="text-align: center;">Sequential</td>
-                            <td style="text-align: center;">Limited</td>
+                            <td style="text-align: center;"><strong>All 81</strong> algorithms simultaneously</td>
                         </tr>
                         <tr>
-                            <td>Fraud Detection</td>
-                            <td style="text-align: center; background-color: #d4edda;"><strong>99.7%</strong></td>
-                            <td style="text-align: center;">~97%</td>
-                            <td style="text-align: center;">~98%</td>
+                            <td>End-to-End Runtime</td>
+                            <td style="text-align: center;"><strong>10-25 min</strong> on RTX 4090</td>
                         </tr>
                         <tr>
-                            <td>End-to-End Time</td>
-                            <td style="text-align: center; background-color: #d4edda;"><strong>10-25 min</strong></td>
-                            <td style="text-align: center;">30-60 min</td>
-                            <td style="text-align: center;">30-90 min</td>
+                            <td>Target Domain</td>
+                            <td style="text-align: center;">Imbalanced classification, fraud detection</td>
                         </tr>
                     </tbody>
                 </table>
+                <p class="text-center" style="font-size: 0.85em; color: #666; margin-top: 10px;">
+                    <em>Note: Code available upon request for academic collaboration.</em>
+                </p>
             </div>
         </div>
 
@@ -282,8 +273,8 @@
                             <td><strong>81</strong> curated: 18 Tree + 22 Neural + 14 Deep Tabular + 16 Classical + 8 Ensemble + 3 Meta</td>
                         </tr>
                         <tr>
-                            <td><strong>Best Accuracy</strong></td>
-                            <td>99.7% (Credit Card Fraud Detection) - Highest among competing AutoML</td>
+                            <td><strong>Target Domain</strong></td>
+                            <td>Imbalanced classification, manufacturing defect detection, fraud detection</td>
                         </tr>
                         <tr>
                             <td><strong>GPU Utilization</strong></td>

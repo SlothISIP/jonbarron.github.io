@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 380">
+  <defs>
+    <linearGradient id="inputGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34495e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="fftGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#16a085;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1abc9c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="filterGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8e44ad;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9b59b6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="outputGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c0392b;stop-opacity:1" />
+    </linearGradient>
+    <marker id="arrow8" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#7f8c8d"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="850" height="380" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="425" y="28" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50" text-anchor="middle">Polygon-Shaped Filters for Frequency Domain Image Analysis</text>
+  <text x="425" y="48" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d" text-anchor="middle">Advanced Filtering Techniques Beyond Traditional Circular Filters</text>
+
+  <!-- Input Image -->
+  <rect x="30" y="80" width="120" height="140" rx="10" fill="url(#inputGrad2)"/>
+  <text x="90" y="108" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Input Image</text>
+  <line x1="45" y1="120" x2="135" y2="120" stroke="white" stroke-width="1" opacity="0.4"/>
+
+  <rect x="45" y="130" width="90" height="60" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <text x="90" y="165" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">f(x,y)</text>
+
+  <text x="90" y="210" font-family="Arial, sans-serif" font-size="8" fill="#bdc3c7" text-anchor="middle">Spatial Domain</text>
+
+  <!-- Arrow -->
+  <path d="M 155 150 L 180 150" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow8)"/>
+  <text x="167" y="140" font-family="Arial, sans-serif" font-size="9" fill="#7f8c8d" text-anchor="middle">FFT</text>
+
+  <!-- Spectrum -->
+  <rect x="185" y="80" width="130" height="140" rx="10" fill="url(#fftGrad2)"/>
+  <text x="250" y="108" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Frequency</text>
+  <text x="250" y="123" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Spectrum</text>
+  <line x1="200" y1="135" x2="300" y2="135" stroke="white" stroke-width="1" opacity="0.4"/>
+
+  <!-- Spectrum visualization -->
+  <circle cx="250" cy="175" r="35" fill="rgba(255,255,255,0.2)"/>
+  <circle cx="250" cy="175" r="20" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="250" cy="175" r="8" fill="white" opacity="0.5"/>
+
+  <text x="250" y="215" font-family="Arial, sans-serif" font-size="9" fill="#d1f2eb" text-anchor="middle">F(u,v)</text>
+
+  <!-- Arrow -->
+  <path d="M 320 150 L 345 150" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow8)"/>
+  <text x="332" y="140" font-family="Arial, sans-serif" font-size="9" fill="#7f8c8d" text-anchor="middle">×</text>
+
+  <!-- Polygon Filter -->
+  <rect x="350" y="70" width="170" height="160" rx="10" fill="url(#filterGrad2)"/>
+  <text x="435" y="98" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">Polygon Filter</text>
+  <line x1="365" y1="110" x2="505" y2="110" stroke="white" stroke-width="1" opacity="0.4"/>
+
+  <!-- Filter shapes display -->
+  <rect x="365" y="120" width="140" height="85" rx="4" fill="rgba(255,255,255,0.15)"/>
+
+  <!-- Hexagon (main) -->
+  <polygon points="435,135 460,150 460,175 435,190 410,175 410,150" fill="rgba(241,196,15,0.4)" stroke="#f1c40f" stroke-width="2"/>
+
+  <text x="435" y="215" font-family="Arial, sans-serif" font-size="9" fill="#f5eef8" text-anchor="middle">H(u,v) = Polygon Mask</text>
+
+  <!-- Arrow -->
+  <path d="M 525 150 L 550 150" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow8)"/>
+  <text x="537" y="140" font-family="Arial, sans-serif" font-size="8" fill="#7f8c8d" text-anchor="middle">IFFT</text>
+
+  <!-- Output -->
+  <rect x="555" y="80" width="120" height="140" rx="10" fill="url(#outputGrad2)"/>
+  <text x="615" y="108" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Filtered</text>
+  <text x="615" y="123" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Output</text>
+  <line x1="570" y1="135" x2="660" y2="135" stroke="white" stroke-width="1" opacity="0.4"/>
+
+  <rect x="575" y="145" width="80" height="50" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <text x="615" y="175" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">g(x,y)</text>
+
+  <text x="615" y="210" font-family="Arial, sans-serif" font-size="8" fill="#fadbd8" text-anchor="middle">Enhanced Image</text>
+
+  <!-- Results Box -->
+  <rect x="690" y="100" width="130" height="120" rx="10" fill="#2c3e50"/>
+  <text x="755" y="125" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">Applications</text>
+  <line x1="705" y1="135" x2="805" y2="135" stroke="white" stroke-width="1" opacity="0.3"/>
+
+  <text x="755" y="155" font-family="Arial, sans-serif" font-size="9" fill="#3498db" text-anchor="middle">Bokeh Effect</text>
+  <text x="755" y="175" font-family="Arial, sans-serif" font-size="9" fill="#27ae60" text-anchor="middle">Edge Detection</text>
+  <text x="755" y="195" font-family="Arial, sans-serif" font-size="9" fill="#e74c3c" text-anchor="middle">Noise Reduction</text>
+  <text x="755" y="215" font-family="Arial, sans-serif" font-size="9" fill="#f39c12" text-anchor="middle">Feature Extract</text>
+
+  <!-- Filter Comparison Box -->
+  <rect x="100" y="255" width="650" height="80" rx="8" fill="rgba(142, 68, 173, 0.1)" stroke="#8e44ad" stroke-width="1"/>
+  <text x="425" y="278" font-family="Arial, sans-serif" font-size="11" fill="#8e44ad" text-anchor="middle" font-weight="bold">Filter Shape Comparison: Polygon vs Circular</text>
+
+  <!-- Circle filter -->
+  <circle cx="200" cy="310" r="22" fill="none" stroke="#7f8c8d" stroke-width="2"/>
+  <text x="200" y="315" font-family="Arial, sans-serif" font-size="8" fill="#7f8c8d" text-anchor="middle">Circle</text>
+
+  <!-- Square -->
+  <rect x="278" y="288" width="44" height="44" fill="none" stroke="#3498db" stroke-width="2"/>
+  <text x="300" y="315" font-family="Arial, sans-serif" font-size="8" fill="#3498db" text-anchor="middle">Square</text>
+
+  <!-- Hexagon (highlighted) -->
+  <polygon points="425,290 447,300 447,320 425,330 403,320 403,300" fill="rgba(155, 89, 182, 0.3)" stroke="#9b59b6" stroke-width="2.5"/>
+  <text x="425" y="315" font-family="Arial, sans-serif" font-size="8" fill="#8e44ad" text-anchor="middle" font-weight="bold">Hexagon</text>
+
+  <!-- Octagon -->
+  <polygon points="550,293 565,293 575,303 575,317 565,327 550,327 540,317 540,303" fill="none" stroke="#27ae60" stroke-width="2"/>
+  <text x="557" y="315" font-family="Arial, sans-serif" font-size="8" fill="#27ae60" text-anchor="middle">Octagon</text>
+
+  <!-- Advantage text -->
+  <text x="680" y="305" font-family="Arial, sans-serif" font-size="9" fill="#9b59b6" text-anchor="start">← Realistic</text>
+  <text x="680" y="320" font-family="Arial, sans-serif" font-size="8" fill="#7f8c8d" text-anchor="start">aperture model</text>
+
+  <!-- Bottom Info -->
+  <text x="425" y="362" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d" text-anchor="middle">IEIE (Institute of Electronics and Information Engineers) Summer Conference 2018 | Kim &amp; Lee</text>
+</svg>

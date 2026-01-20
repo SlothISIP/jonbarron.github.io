@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 400">
+  <defs>
+    <linearGradient id="uwbGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34495e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="prepGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#16a085;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1abc9c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="featureGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2980b9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3498db;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="mlGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8e44ad;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9b59b6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="outGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#27ae60;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2ecc71;stop-opacity:1" />
+    </linearGradient>
+    <marker id="arrow7" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#7f8c8d"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="850" height="400" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="425" y="28" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50" text-anchor="middle">UWB Radar + Machine Learning for Respiratory Classification</text>
+  <text x="425" y="48" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d" text-anchor="middle">Multi-Feature Extraction with Ensemble Learning Methods</text>
+
+  <!-- UWB Radar -->
+  <rect x="25" y="90" width="110" height="130" rx="10" fill="url(#uwbGrad2)"/>
+  <text x="80" y="118" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">UWB Radar</text>
+  <text x="80" y="135" font-family="Arial, sans-serif" font-size="9" fill="#bdc3c7" text-anchor="middle">Novelda X4</text>
+  <line x1="40" y1="145" x2="120" y2="145" stroke="white" stroke-width="1" opacity="0.4"/>
+
+  <!-- Signal waves -->
+  <rect x="40" y="155" width="80" height="45" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <path d="M 50 178 Q 60 165 70 178 Q 80 191 90 178 Q 100 165 110 178" stroke="#3498db" stroke-width="2" fill="none"/>
+
+  <text x="80" y="215" font-family="Arial, sans-serif" font-size="8" fill="#95a5a6" text-anchor="middle">4-8 GHz Band</text>
+
+  <!-- Arrow -->
+  <path d="M 140 155 L 165 155" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow7)"/>
+
+  <!-- Preprocessing -->
+  <rect x="170" y="90" width="120" height="130" rx="10" fill="url(#prepGrad)"/>
+  <text x="230" y="118" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Preprocessing</text>
+  <line x1="185" y1="130" x2="275" y2="130" stroke="white" stroke-width="1" opacity="0.4"/>
+
+  <rect x="185" y="140" width="90" height="22" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <text x="230" y="155" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">Bandpass Filter</text>
+
+  <rect x="185" y="168" width="90" height="22" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <text x="230" y="183" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">Normalization</text>
+
+  <text x="230" y="210" font-family="Arial, sans-serif" font-size="8" fill="#d1f2eb" text-anchor="middle">Noise Reduction</text>
+
+  <!-- Arrow -->
+  <path d="M 295 155 L 320 155" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow7)"/>
+
+  <!-- Feature Extraction -->
+  <rect x="325" y="75" width="150" height="160" rx="10" fill="url(#featureGrad)"/>
+  <text x="400" y="103" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Feature Extraction</text>
+  <line x1="340" y1="115" x2="460" y2="115" stroke="white" stroke-width="1" opacity="0.4"/>
+
+  <rect x="340" y="125" width="120" height="22" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <text x="400" y="140" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">Time Domain</text>
+
+  <rect x="340" y="152" width="120" height="22" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <text x="400" y="167" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">Frequency Domain</text>
+
+  <rect x="340" y="179" width="120" height="22" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <text x="400" y="194" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">Statistical Features</text>
+
+  <text x="400" y="220" font-family="Arial, sans-serif" font-size="8" fill="#d6eaf8" text-anchor="middle">Wavelet Transform</text>
+
+  <!-- Arrow -->
+  <path d="M 480 155 L 505 155" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow7)"/>
+
+  <!-- ML Classification -->
+  <rect x="510" y="75" width="150" height="160" rx="10" fill="url(#mlGrad)"/>
+  <text x="585" y="103" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">ML Classifiers</text>
+  <line x1="525" y1="115" x2="645" y2="115" stroke="white" stroke-width="1" opacity="0.4"/>
+
+  <rect x="525" y="125" width="120" height="20" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <text x="585" y="139" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">SVM</text>
+
+  <rect x="525" y="150" width="120" height="20" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <text x="585" y="164" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">Random Forest</text>
+
+  <rect x="525" y="175" width="120" height="20" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <text x="585" y="189" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">Neural Network</text>
+
+  <rect x="525" y="200" width="120" height="20" rx="4" fill="rgba(255,255,255,0.25)"/>
+  <text x="585" y="214" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle" font-weight="bold">Ensemble</text>
+
+  <!-- Arrow -->
+  <path d="M 665 155 L 690 155" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow7)"/>
+
+  <!-- Output -->
+  <rect x="695" y="90" width="130" height="130" rx="10" fill="url(#outGrad)"/>
+  <text x="760" y="118" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Classification</text>
+  <line x1="710" y1="130" x2="810" y2="130" stroke="white" stroke-width="1" opacity="0.4"/>
+
+  <rect x="710" y="140" width="100" height="22" rx="4" fill="rgba(255,255,255,0.3)"/>
+  <text x="760" y="155" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle" font-weight="bold">Normal</text>
+
+  <rect x="710" y="167" width="100" height="22" rx="4" fill="#f39c12"/>
+  <text x="760" y="182" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle" font-weight="bold">Shallow</text>
+
+  <rect x="710" y="194" width="100" height="22" rx="4" fill="#e74c3c"/>
+  <text x="760" y="209" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle" font-weight="bold">Apnea</text>
+
+  <!-- Performance Metrics Box -->
+  <rect x="100" y="265" width="650" height="85" rx="8" fill="rgba(142, 68, 173, 0.1)" stroke="#8e44ad" stroke-width="1"/>
+  <text x="425" y="290" font-family="Arial, sans-serif" font-size="11" fill="#8e44ad" text-anchor="middle" font-weight="bold">Machine Learning Performance Comparison</text>
+
+  <!-- Performance bars -->
+  <text x="180" y="315" font-family="Arial, sans-serif" font-size="9" fill="#7f8c8d" text-anchor="end">SVM</text>
+  <rect x="190" y="305" width="140" height="15" rx="3" fill="#3498db"/>
+  <text x="335" y="316" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="start">87%</text>
+
+  <text x="400" y="315" font-family="Arial, sans-serif" font-size="9" fill="#7f8c8d" text-anchor="end">RF</text>
+  <rect x="410" y="305" width="150" height="15" rx="3" fill="#9b59b6"/>
+  <text x="565" y="316" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="start">91%</text>
+
+  <text x="620" y="315" font-family="Arial, sans-serif" font-size="9" fill="#7f8c8d" text-anchor="end">Ensemble</text>
+  <rect x="630" y="305" width="110" height="15" rx="3" fill="#27ae60"/>
+  <text x="645" y="316" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="start">94%</text>
+
+  <text x="425" y="340" font-family="Arial, sans-serif" font-size="9" fill="#7f8c8d" text-anchor="middle">Ensemble methods achieve highest accuracy with combined feature sets</text>
+
+  <!-- Bottom Info -->
+  <text x="425" y="378" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d" text-anchor="middle">KICS Winter Conference 2020 | Kim &amp; Lee | Keimyung University</text>
+</svg>

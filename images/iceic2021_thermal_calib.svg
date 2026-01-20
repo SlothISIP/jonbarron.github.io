@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 400">
+  <defs>
+    <linearGradient id="thermalGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f39c12;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f1c40f;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="edgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2980b9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3498db;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cornerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8e44ad;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9b59b6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="calibGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#27ae60;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2ecc71;stop-opacity:1" />
+    </linearGradient>
+    <marker id="arrow5" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#7f8c8d"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="850" height="400" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="425" y="28" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50" text-anchor="middle">Boundary and Corner Detection for Multiple Thermal Camera Calibration</text>
+  <text x="425" y="48" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d" text-anchor="middle">Heat-Box Pattern Detection using Edge and Corner Extraction Algorithms</text>
+
+  <!-- Thermal Camera Input -->
+  <rect x="30" y="85" width="130" height="170" rx="10" fill="url(#thermalGrad2)"/>
+  <text x="95" y="115" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Thermal Image</text>
+  <line x1="45" y1="127" x2="145" y2="127" stroke="white" stroke-width="1" opacity="0.4"/>
+
+  <!-- Heat-box pattern -->
+  <rect x="50" y="140" width="90" height="70" rx="4" fill="rgba(0,0,0,0.3)"/>
+  <!-- Checkerboard pattern simulation -->
+  <rect x="55" y="145" width="20" height="15" fill="white" opacity="0.9"/>
+  <rect x="75" y="145" width="20" height="15" fill="rgba(255,100,50,0.8)"/>
+  <rect x="95" y="145" width="20" height="15" fill="white" opacity="0.9"/>
+  <rect x="115" y="145" width="20" height="15" fill="rgba(255,100,50,0.8)"/>
+  <rect x="55" y="160" width="20" height="15" fill="rgba(255,100,50,0.8)"/>
+  <rect x="75" y="160" width="20" height="15" fill="white" opacity="0.9"/>
+  <rect x="95" y="160" width="20" height="15" fill="rgba(255,100,50,0.8)"/>
+  <rect x="115" y="160" width="20" height="15" fill="white" opacity="0.9"/>
+  <rect x="55" y="175" width="20" height="15" fill="white" opacity="0.9"/>
+  <rect x="75" y="175" width="20" height="15" fill="rgba(255,100,50,0.8)"/>
+  <rect x="95" y="175" width="20" height="15" fill="white" opacity="0.9"/>
+  <rect x="115" y="175" width="20" height="15" fill="rgba(255,100,50,0.8)"/>
+  <rect x="55" y="190" width="20" height="15" fill="rgba(255,100,50,0.8)"/>
+  <rect x="75" y="190" width="20" height="15" fill="white" opacity="0.9"/>
+  <rect x="95" y="190" width="20" height="15" fill="rgba(255,100,50,0.8)"/>
+  <rect x="115" y="190" width="20" height="15" fill="white" opacity="0.9"/>
+
+  <text x="95" y="230" font-family="Arial, sans-serif" font-size="8" fill="#fdebd0" text-anchor="middle">Heat-Box Pattern</text>
+  <text x="95" y="245" font-family="Arial, sans-serif" font-size="8" fill="#f8c471" text-anchor="middle">Low Resolution</text>
+
+  <!-- Arrow -->
+  <path d="M 165 170 L 195 170" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow5)"/>
+
+  <!-- Edge Detection -->
+  <rect x="200" y="85" width="140" height="170" rx="10" fill="url(#edgeGrad)"/>
+  <text x="270" y="115" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Edge Detection</text>
+  <line x1="215" y1="127" x2="325" y2="127" stroke="white" stroke-width="1" opacity="0.4"/>
+
+  <rect x="215" y="140" width="110" height="25" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <text x="270" y="157" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">Canny Edge</text>
+
+  <rect x="215" y="172" width="110" height="25" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <text x="270" y="189" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">Gradient Analysis</text>
+
+  <rect x="215" y="204" width="110" height="25" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <text x="270" y="221" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">Line Fitting</text>
+
+  <text x="270" y="248" font-family="Arial, sans-serif" font-size="8" fill="#d6eaf8" text-anchor="middle">Boundary Extraction</text>
+
+  <!-- Arrow -->
+  <path d="M 345 170 L 375 170" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow5)"/>
+
+  <!-- Corner Detection -->
+  <rect x="380" y="85" width="150" height="170" rx="10" fill="url(#cornerGrad)"/>
+  <text x="455" y="115" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Corner Detection</text>
+  <line x1="395" y1="127" x2="515" y2="127" stroke="white" stroke-width="1" opacity="0.4"/>
+
+  <rect x="395" y="140" width="120" height="25" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <text x="455" y="157" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">Fast Corner Detector</text>
+
+  <rect x="395" y="172" width="120" height="25" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <text x="455" y="189" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">Förstner Corner</text>
+
+  <rect x="395" y="204" width="120" height="25" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <text x="455" y="221" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">Sub-pixel Accuracy</text>
+
+  <text x="455" y="248" font-family="Arial, sans-serif" font-size="8" fill="#e8daef" text-anchor="middle">Point Localization</text>
+
+  <!-- Arrow -->
+  <path d="M 535 170 L 565 170" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow5)"/>
+
+  <!-- Calibration -->
+  <rect x="570" y="85" width="130" height="170" rx="10" fill="url(#calibGrad2)"/>
+  <text x="635" y="115" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Calibration</text>
+  <line x1="585" y1="127" x2="685" y2="127" stroke="white" stroke-width="1" opacity="0.4"/>
+
+  <text x="635" y="152" font-family="Arial, sans-serif" font-size="9" fill="#d5f5e3" text-anchor="middle">Intrinsic Matrix K</text>
+  <text x="635" y="172" font-family="Arial, sans-serif" font-size="9" fill="#d5f5e3" text-anchor="middle">Distortion Coeffs</text>
+
+  <rect x="590" y="185" width="90" height="30" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <text x="635" y="205" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">Zhang's Method</text>
+
+  <text x="635" y="235" font-family="Arial, sans-serif" font-size="8" fill="#abebc6" text-anchor="middle">Multi-view</text>
+  <text x="635" y="248" font-family="Arial, sans-serif" font-size="8" fill="#abebc6" text-anchor="middle">Calibration</text>
+
+  <!-- Arrow -->
+  <path d="M 705 170 L 735 170" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow5)"/>
+
+  <!-- Results -->
+  <rect x="740" y="105" width="90" height="130" rx="10" fill="#2c3e50"/>
+  <text x="785" y="130" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">Results</text>
+  <line x1="755" y1="142" x2="815" y2="142" stroke="white" stroke-width="1" opacity="0.3"/>
+
+  <text x="785" y="165" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#27ae60" text-anchor="middle">0.58px</text>
+  <text x="785" y="180" font-family="Arial, sans-serif" font-size="8" fill="#bdc3c7" text-anchor="middle">RMS error</text>
+
+  <text x="785" y="205" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#3498db" text-anchor="middle">3 views</text>
+  <text x="785" y="220" font-family="Arial, sans-serif" font-size="8" fill="#bdc3c7" text-anchor="middle">calibrated</text>
+
+  <!-- Multi-Camera System Box -->
+  <rect x="130" y="280" width="590" height="70" rx="8" fill="rgba(142, 68, 173, 0.1)" stroke="#8e44ad" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="425" y="302" font-family="Arial, sans-serif" font-size="10" fill="#8e44ad" text-anchor="middle" font-weight="bold">Multi-Camera Thermal System</text>
+
+  <!-- Camera icons -->
+  <rect x="200" y="315" width="40" height="25" rx="3" fill="#e74c3c"/>
+  <text x="220" y="332" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">Cam 1</text>
+
+  <rect x="310" y="315" width="40" height="25" rx="3" fill="#e74c3c"/>
+  <text x="330" y="332" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">Cam 2</text>
+
+  <rect x="420" y="315" width="40" height="25" rx="3" fill="#e74c3c"/>
+  <text x="440" y="332" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">Cam 3</text>
+
+  <text x="550" y="325" font-family="Arial, sans-serif" font-size="9" fill="#7f8c8d" text-anchor="start">Non-overlapping FOV</text>
+  <text x="550" y="340" font-family="Arial, sans-serif" font-size="9" fill="#7f8c8d" text-anchor="start">>180° total coverage</text>
+
+  <!-- Bottom Info -->
+  <text x="425" y="378" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d" text-anchor="middle">ICEIC (Int'l Conf. on Electronics, Information, and Communication) 2021 | Kim &amp; Lee | Keimyung University</text>
+</svg>

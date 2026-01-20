@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 400">
+  <defs>
+    <linearGradient id="uwbGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34495e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="zGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2980b9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3498db;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="analyzeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8e44ad;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9b59b6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="resultGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#27ae60;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2ecc71;stop-opacity:1" />
+    </linearGradient>
+    <marker id="arrow6" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#7f8c8d"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="850" height="400" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="425" y="28" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50" text-anchor="middle">Z-Domain Analysis for Abnormal Respiration Detection</text>
+  <text x="425" y="48" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d" text-anchor="middle">Pole-Zero Feature Extraction from UWB Radar Respiratory Signals</text>
+
+  <!-- UWB Radar Input -->
+  <rect x="30" y="80" width="130" height="160" rx="10" fill="url(#uwbGrad)"/>
+  <text x="95" y="110" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">UWB Radar</text>
+  <text x="95" y="128" font-family="Arial, sans-serif" font-size="10" fill="#bdc3c7" text-anchor="middle">Novelda X4</text>
+  <line x1="45" y1="140" x2="145" y2="140" stroke="white" stroke-width="1" opacity="0.4"/>
+
+  <!-- Respiratory waveform -->
+  <rect x="45" y="150" width="100" height="50" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <path d="M 55 175 Q 70 155 85 175 Q 100 195 115 175 Q 130 155 135 175" stroke="#3498db" stroke-width="2" fill="none"/>
+
+  <text x="95" y="220" font-family="Arial, sans-serif" font-size="9" fill="#bdc3c7" text-anchor="middle">x[n] Respiratory</text>
+  <text x="95" y="233" font-family="Arial, sans-serif" font-size="8" fill="#95a5a6" text-anchor="middle">10 samples/sec</text>
+
+  <!-- Arrow -->
+  <path d="M 165 160 L 195 160" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow6)"/>
+
+  <!-- Z-Transform Block -->
+  <rect x="200" y="75" width="160" height="170" rx="10" fill="url(#zGrad)"/>
+  <text x="280" y="105" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">Z-Transform</text>
+  <line x1="215" y1="118" x2="345" y2="118" stroke="white" stroke-width="1" opacity="0.4"/>
+
+  <!-- Formula box -->
+  <rect x="215" y="130" width="130" height="35" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <text x="280" y="152" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">X(z) = Σx[n]z⁻ⁿ</text>
+
+  <text x="280" y="185" font-family="Arial, sans-serif" font-size="9" fill="#d6eaf8" text-anchor="middle">Time → Frequency</text>
+  <text x="280" y="203" font-family="Arial, sans-serif" font-size="9" fill="#d6eaf8" text-anchor="middle">Domain Conversion</text>
+
+  <text x="280" y="230" font-family="Arial, sans-serif" font-size="8" fill="#aed6f1" text-anchor="middle">Stability Analysis</text>
+
+  <!-- Arrow -->
+  <path d="M 365 160 L 395 160" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow6)"/>
+
+  <!-- Pole-Zero Analysis -->
+  <rect x="400" y="75" width="180" height="170" rx="10" fill="url(#analyzeGrad)"/>
+  <text x="490" y="105" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">Z-Plane Analysis</text>
+  <line x1="415" y1="118" x2="565" y2="118" stroke="white" stroke-width="1" opacity="0.4"/>
+
+  <!-- Z-plane diagram -->
+  <rect x="420" y="125" width="140" height="100" rx="4" fill="rgba(255,255,255,0.15)"/>
+
+  <!-- Unit circle -->
+  <circle cx="490" cy="175" r="40" fill="none" stroke="white" stroke-width="1.5"/>
+
+  <!-- Axes -->
+  <line x1="435" y1="175" x2="545" y2="175" stroke="white" stroke-width="0.5" opacity="0.5"/>
+  <line x1="490" y1="130" x2="490" y2="220" stroke="white" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Poles (X marks) -->
+  <text x="510" y="165" font-family="Arial, sans-serif" font-size="14" fill="#e74c3c" font-weight="bold">×</text>
+  <text x="465" y="190" font-family="Arial, sans-serif" font-size="14" fill="#e74c3c" font-weight="bold">×</text>
+
+  <!-- Zeros (O marks) -->
+  <circle cx="520" cy="185" r="5" fill="none" stroke="#27ae60" stroke-width="2"/>
+  <circle cx="455" cy="165" r="5" fill="none" stroke="#27ae60" stroke-width="2"/>
+
+  <text x="440" y="238" font-family="Arial, sans-serif" font-size="8" fill="#e74c3c">× Poles</text>
+  <text x="500" y="238" font-family="Arial, sans-serif" font-size="8" fill="#27ae60">○ Zeros</text>
+
+  <!-- Arrow -->
+  <path d="M 585 160 L 615 160" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow6)"/>
+
+  <!-- Classification Output -->
+  <rect x="620" y="80" width="130" height="160" rx="10" fill="url(#resultGrad)"/>
+  <text x="685" y="110" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Classification</text>
+  <line x1="635" y1="122" x2="735" y2="122" stroke="white" stroke-width="1" opacity="0.4"/>
+
+  <rect x="640" y="135" width="90" height="25" rx="4" fill="rgba(255,255,255,0.3)"/>
+  <text x="685" y="152" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle" font-weight="bold">Normal</text>
+
+  <rect x="640" y="167" width="90" height="25" rx="4" fill="#e74c3c"/>
+  <text x="685" y="184" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle" font-weight="bold">Apnea</text>
+
+  <rect x="640" y="199" width="90" height="25" rx="4" fill="#f39c12"/>
+  <text x="685" y="216" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle" font-weight="bold">Abnormal</text>
+
+  <!-- Arrow to Result -->
+  <path d="M 755 160 L 785 160" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow6)"/>
+
+  <!-- Final Result -->
+  <rect x="790" y="120" width="50" height="80" rx="8" fill="#2c3e50"/>
+  <text x="815" y="150" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#27ae60" text-anchor="middle">93%</text>
+  <text x="815" y="168" font-family="Arial, sans-serif" font-size="8" fill="#bdc3c7" text-anchor="middle">Accuracy</text>
+  <text x="815" y="190" font-family="Arial, sans-serif" font-size="8" fill="#7f8c8d" text-anchor="middle">Real-time</text>
+
+  <!-- Key Features Box -->
+  <rect x="130" y="275" width="590" height="75" rx="8" fill="rgba(41, 128, 185, 0.1)" stroke="#2980b9" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="425" y="298" font-family="Arial, sans-serif" font-size="10" fill="#2980b9" text-anchor="middle" font-weight="bold">Z-Domain Feature Extraction Advantages</text>
+
+  <text x="230" y="322" font-family="Arial, sans-serif" font-size="9" fill="#3498db" text-anchor="middle">Stability Indicators</text>
+  <text x="425" y="322" font-family="Arial, sans-serif" font-size="9" fill="#3498db" text-anchor="middle">Frequency Characteristics</text>
+  <text x="620" y="322" font-family="Arial, sans-serif" font-size="9" fill="#3498db" text-anchor="middle">Pattern Recognition</text>
+
+  <text x="230" y="338" font-family="Arial, sans-serif" font-size="8" fill="#7f8c8d" text-anchor="middle">Pole positions</text>
+  <text x="425" y="338" font-family="Arial, sans-serif" font-size="8" fill="#7f8c8d" text-anchor="middle">Dominant modes</text>
+  <text x="620" y="338" font-family="Arial, sans-serif" font-size="8" fill="#7f8c8d" text-anchor="middle">Abnormal detection</text>
+
+  <!-- Bottom Info -->
+  <text x="425" y="378" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d" text-anchor="middle">KICS (Korean Institute of Communications and Information Sciences) 2020 | Kim &amp; Lee</text>
+</svg>
